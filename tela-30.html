@@ -1,34 +1,170 @@
-<header style="height: 60px; width: 100%; background-color: #a9e5ea;">
-    <img style="height: 60px; width: 460px; position: absolute; right: 0px;" src="recursos/imgs/H1.png">
-    <p style="position: absolute;color: #294666;margin-left: 43px;margin-top: 26px;font-size: 12px;">TÓPICO<strong>
-            1</strong></p>
-    <p
-        style="position: absolute;font: normal normal normal 11px/15px Poppins;letter-spacing: 0px;color: #294666;margin-left: 112px;margin-top: 17px;width: 390px;">
-        ESTRUTURA ENQUANTO AMPLIFICADORA DO IMPACTO E DA<br> QUALIDADE DAS AÇÕES DESENVOLVIDAS NA ATENÇÃO PRIMÁRIA À
-        SAÚDE</p>
-</header>
-<div style="margin-top: 49px;margin-left: 41px;width: 808px;">
-    <p>No entanto, na prática, como minimizar o impacto das deficiências relacionadas aos processos de compra,
-        registro
-        e distribuição de insumos relativos ao provimento de serviço e oferta de ações em saúde? Basicamente, no
-        aperfeiçoamento contínuo com busca de novas estratégias no seu gerenciamento, não se limitando apenas à
-        solicitação e à distribuição de insumos entre os trabalhadores.</p>
-</div>
-<div class="animate__animated animate__backInRight"
-    style="margin-top: 40px;margin-left: 157px;display: flex;flex-direction: row;width: 574px;height: 177px;top: 139px;right: 15px;background-color: #FFF2D9;border-radius: 10px;">
-    <img src="recursos/imgs/importante-icon.svg" style="width: 48px;height: 48px;margin-top: 64px;margin-left: 19px;">
-    <div style="display: initial;margin-left: 21px;width: 471px;">
-        <p style="font-weight: bold;color: #294666;font-size: 15px;">IMPORTANTE</p>
-        <p style="font: normal normal normal 13px/16px Poppins;">Na UBS, a disponibilidade de recursos de apoio
-            possui
-            função precípua de atender às necessidades clínico-assistenciais, incluindo as atividades meio, e
-            contemplando os materiais para atendimentos às urgências, como equipamentos de informática. Em suma,
-            destacamos: materiais de expediente, informática, manutenção, enxovais, lavanderias, descartáveis,
-            equipamentos audiovisuais, produtos para a saúde e outros materiais de uso geral.</p>
+<style>
+    .triangulo {
+        border-left: 200px solid transparent;
+        border-right: 0px solid transparent;
+        border-bottom: 200px solid #ffc000;
+        position: absolute;
+        top: 280px;
+        left: 660px;
+    }
+
+    .flip-box {
+        background-color: transparent;
+        width: 95px;
+        /* height: 275px; */
+        border: 1px solid #f1f1f1;
+        perspective: 1000px;
+    }
+
+    .flip-box-inner {
+        position: relative;
+        width: 95px;
+        /* height: 275px; */
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+    }
+
+    .flip-box-inner:hover {
+        transform: rotateY(180deg);
+    }
+
+    .flip-box-front,
+    .flip-box-back {
+        position: absolute;
+        width: 95px;
+        /* height: 275px; */
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+    .flip-box-front {
+        background-color: #bbb;
+        color: black;
+    }
+
+    .flip-box-back {
+        background-color: #004c72;
+        color: white;
+        transform: rotateY(180deg);
+    }
+</style>
+<div style="padding: 40px;">
+    <div class="triangulo"></div>
+    <div style="border-style: solid;border-color: black;width: 800px;height: 420px;position: absolute;">
+
+
+
+        <div style="height: 72px; width: 100%; background-color: #004c72; ">
+            <div style="background-color: white; width: 17px; height: 66px; margin-left: 19px; display: flex;">
+                <img style="height: 43.5px; width:180px; margin-top: 12.8px; margin-left: 68.45px;"
+                    src="recursos/imgs/SI_H1.png">
+                <img style="height: 73px; margin-left:170.85px;" src="recursos/imgs/SI_H2.png">
+                <img style="height: 46.8px; width:56.75px;  position: absolute; right: 1px;"
+                    src="recursos/imgs/SI_H3.png">
+            </div>
+            <div class="coluna-esquerda largura-1_1">
+                <div style="margin-top: 25px;margin-left: 110px;width: 650px;">
+                    <p>Vejamos alguns exemplos para que você possa compreender melhor os conceitos
+                        de<strong>
+                            doença</strong> e
+                        de<strong> agravo.</strong></p>
+                    <p><strong style="color: #004c72;">Passe o mouse</strong> sobre as imagens para entender
+                        mais a
+                        respeito das situações ilustradas.</p>
+                    <div style="margin-top: 7px;margin-left: 37px;display: flex;">
+                        <div class="flip-box">
+                            <div class="flip-box-inner">
+                                <div class="flip-box-front">
+                                    <img style=" width: 95px;" src="recursos/imgs/SI_13a.png">
+                                </div>
+                                <div class="flip-box-back">
+                                    <p
+                                        style="margin: auto;margin-top: 65px;padding: 10px;text-align: center;color: white;font-size: 10px;">
+                                        Uma
+                                        idosa de 63 anos, diabética, que perde a visão em decorrência das
+                                        complicações da doença mal
+                                        controlada.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-box">
+                            <div class="flip-box-inner">
+                                <div class="flip-box-front">
+                                    <img style=" width: 95px;" src="recursos/imgs/SI_13b.png">
+                                </div>
+                                <div class="flip-box-back">
+                                    <p
+                                        style="margin: auto;margin-top: 5px;padding: 10px;text-align: center;color: white;font-size: 10px;">
+                                        Uma
+                                        criança que sofre um atropelamento quando estava a andar de
+                                        bicicleta e que,
+                                        por
+                                        consequência, sofre uma lesão na
+                                        coluna, perdendo a movimentação das pernas.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-box">
+                            <div class="flip-box-inner">
+                                <div class="flip-box-front">
+                                    <img style=" width: 95px;" src="recursos/imgs/SI_13c.png">
+                                </div>
+                                <div class="flip-box-back">
+                                    <p
+                                        style="margin: auto;margin-top: -6px;padding: 10px;text-align: center;color: white;font-size: 10px;">
+                                        Um
+                                        adolescente que tem dificuldades de conviver em sociedade devido à
+                                        depressão
+                                        e que, em razão
+                                        disso, tenta
+                                        autoagressão e acaba provocando grandes cortes no braço.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-box">
+                            <div class="flip-box-inner">
+                                <div class="flip-box-front">
+                                    <img style=" width: 95px;" src="recursos/imgs/SI_13d.png">
+                                </div>
+                                <div class="flip-box-back">
+                                    <p
+                                        style="margin: auto;margin-top: 53px;padding: 10px;text-align: center;color: white;font-size: 10px;">
+                                        Uma
+                                        gestante que adquire catapora ao entrar em contato com uma criança
+                                        da
+                                        vizinhança que está
+                                        com a doença.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-box">
+                            <div class="flip-box-inner">
+                                <div class="flip-box-front">
+                                    <img style=" width: 95px;" src="recursos/imgs/SI_13e.png">
+                                </div>
+                                <div class="flip-box-back">
+                                    <p
+                                        style="margin: auto;margin-top: 6px;padding: 10px;text-align: center;color: white;font-size: 10px;">
+                                        Um
+                                        trabalhador urbano que recolhe lixo e é exposto a lixo hospitalar
+                                        radioativo, descartado
+                                        indevidamente, e que
+                                        desenvolve queimaduras ou algum tipo de câncer.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer style="height: 39.05px; width: 100%; background-color: #004c72;">
+                <img style="height: 22.65px; margin: 8.5px 37.05px;" src="recursos/imgs/SI_F1.png">
+                <img style="height: 22.75px; margin: 8.5px 37.05px; position: absolute; right: 0px;"
+                    src="recursos/imgs/SI_F2.png">
+            </footer>
+        </div>
+
+
     </div>
 </div>
-<footer style="width: 1008px;height: 19px;display: flex;background-color: #CEE4F1;">
-    <div style="margin-top: -8px;display: flex;margin-left: 42px;">
-        <p style="color: #294666;font-size: 11px;">GESTÃO DA QUALIDADE NA APS</p>
-    </div>
-</footer>

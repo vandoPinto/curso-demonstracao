@@ -1,70 +1,72 @@
 <style>
-    p {
-        font-size: 13px;
+    .triangulo {
+        border-left: 200px solid transparent;
+        border-right: 0px solid transparent;
+        border-bottom: 200px solid #ffc000;
+        position: absolute;
+        top: 280px;
+        left: 660px;
     }
 </style>
-<div style="margin-left: 29px;margin-top: 43px;width: 848px;">
-    <p style="color: #ffa800;font-size: 20px; font-weight: bolder;">Referências</p>
+<div style="padding: 40px;">
+    <div class="triangulo"></div>
+    <div style="border-style: solid;border-color: black;width: 800px;height: 420px;position: absolute;">
 
-    <p>
-        BARRETO, R. M. <i>et al</i>. Avaliação da dimensão estrutura para a qualidade da Atenção Primária à Saúde.
-        <b>Enfermagem em Foco</b>, [<i>s. l.</i>], v. 11, n. 3, p. 225-232, dez. 2020. Disponível em:
-        <a href="http://revista.cofen.gov.br/index.php/enfermagem/article/view/3273/911" target="_blank"
-            style="color: #1592E6;">http://revista.cofen.gov.br/index.php/enfermagem/article/view/3273/911</a>. Acesso
-        em: 5 out. 2021.
-    </p>
 
-    <p>
-        BRASIL. Ministério
-        da Saúde. Secretaria de Atenção à Saúde. Departamento de Atenção Básica. <b>Manual de estrutura física das
-            unidades básicas de saúde</b>: saúde da família. 2. ed. Brasília: Ministério da Saúde, 2008. Disponível em:
-        <a href="https://bvsms.saude.gov.br/bvs/publicacoes/manual_estrutura_fisica_ubs.pdf" target="_blank"
-            style="color: #1592E6;">https://bvsms.saude.gov.br/bvs/publicacoes/manual_estrutura_fisica_ubs.pdf</a>.
-        Acesso em: 16 ago. 2022.
-    </p>
+        <div style="height: 72px; width: 100%; background-color: #FAC900; ">
+            <div style="background-color: white; width: 17px; height: 66px; margin-left: 19px; display: flex;">
+                <img style="height: 43px; margin-top: 12.8px; margin-left: 50px;" src="recursos/imgs/SI_H1.png">
+                <img style="height: 73.05px; width:108.45px; margin-left:170.85px;" src="recursos/imgs/SI_H2.png">
+                <img style="height: 46.8px; width:56.75px;  position: absolute; right: 1px;"
+                    src="recursos/imgs/SI_H3.png">
+            </div>
+            <div class="coluna-esquerda largura-1_3">
+                <img style="width: 220px;margin-top: 5px;margin-left: 30px;" src="recursos/imgs/SI_27.gif">
+            </div>
+            <div class="coluna-direita largura-2_1 ">
+                <div style="width: 505px;margin-top: 65px;margin-right: 45px;">
+                    <h1 style="
+    color: #004D73;
+    font-size: 18px;
+    font-weight: bold;
+">Desafios a enfrentar: intersetorialidade e
+                        descentralização da atenção à saúde no sistema
+                        prisional</h1>
+                    <p>Em adição aos desafios do sistema prisional, mesmo diante do reconhecimento da
+                        necessidade de articulação entre os setores, ainda é visível a dificuldade de se colocar em
+                        prática a
+                        <strong style="width: 40px; background-color: #FAC900; display: inline; cursor: pointer;"><a
+                                id="hotWord-bt">intersetorialidade</a></strong>
+                        na execução da política de saúde, considerando que o
+                        desenho da política envolve diferentes instâncias (governos federal, estadual e municipal)
+                        e naturezas de trabalho aparentemente dicotômicas (assistências x segurança).
+                    </p>
+                </div>
+            </div>
+            <footer style="height: 39.05px; width: 100%; background-color: #FAC900;">
+                <img style="height: 23px; margin: 8.5px 37.05px;" src="recursos/imgs/SI_F1.png">
+                <img style="height: 22.75px; width:225.8px; margin: 8.5px 37.05px; position: absolute; right: 0px;"
+                    src="recursos/imgs/SI_F2.png">
+            </footer>
+            <div id="conteudo"
+                style="position: absolute; background-color: rgb(250, 201, 1); top: 239px; left: 265px; width: 439px; border-radius: 10px; display: none;">
+                <p style="text-align: center;">Articulação entre sujeitos de setores diversos, com diferentes
+                    saberes e poderes com vistas a enfrentar problemas
+                    complexos.</p>
+            </div>
+            <script>
+                $(() => {
+                    let conteudo = $('#conteudo').hide();
+                    $('#hotWord-bt').hover(() => {
+                        conteudo.fadeIn()
+                    })
+                    $('#hotWord-bt').mouseout(() => {
+                        conteudo.fadeOut()
+                    })
+                })
+            </script>
+        </div>
 
-    <p>
-        CASTRO, S. S.
-        <i>et al</i>. Acessibilidade aos serviços de saúde por pessoas com deficiência. <b>Revista de Saúde Pública</b>,
-        São Paulo, v. 45,
-        n. 1, p. 99-105, fev. 2011. Disponível em:
-        <a href="https://www.scielo.br/j/rsp/a/JmzdmXDzwZ48DJGB8xnrvCN/?format=pdf&lang=en" target="_blank"
-            style="color: #1592E6;">https://www.scielo.br/j/rsp/a/JmzdmXDzwZ48DJGB8xnrvCN/?format=pdf&lang=en</a>.
-        Acesso em: 16 ago. 2022.
-    </p>
 
-    <p>
-        COSTA, L. B. <i>et al</i>. Avaliação da qualidade da Atenção Primária à Saúde em Fortaleza, Brasil, na
-        perspectiva dos usuários adultos no
-        ano de 2019. <b>Ciência & Saúde Coletiva</b>, Rio de Janeiro, v. 26, n. 6, p. 2083-2096, jun. 2021. Disponível
-        em:
-        <a href="https://www.scielo.br/j/csc/a/6qV76YwhkBCMJRcqSnsB4sb/?format=pdf&lang=pt" target="_blank"
-            style="color: #1592E6;">https://www.scielo.br/j/csc/a/6qV76YwhkBCMJRcqSnsB4sb/?format=pdf&lang=pt</a>.
-        Acesso em: 5 out. 2021.
-    </p>
-
-    <p>
-        COSTA, M. A. <i>et al</i>. Avaliação da qualidade dos serviços de Atenção Primária à Saúde no município de São
-        José de Ribamar, Maranhão,
-        Brasil. <b>Interface</b>, Botucatu, v. 24, supl. 1, e190628, 2020. Disponível em:
-        <a href="https://www.scielo.br/j/icse/a/mkLzPhDZLmmfsT3kVMVtGBf/?format=pdf&lang=pt" target="_blank"
-            style="color: #1592E6;">https://www.scielo.br/j/icse/a/mkLzPhDZLmmfsT3kVMVtGBf/?format=pdf&lang=pt</a>.
-        Acesso em: 5 out. 2021.
-    </p>
-
-    <p>
-        DOMINGUES, C.
-        M. A. S. <i>et al</i>. Vacina Brasil e estratégias de formação e desenvolvimento em imunizações.
-        <b>Epidemiologia e Serviços de Saúde</b>, Brasília, v. 28, n. 2, e20190223, jun. 2019. Disponível em
-        <a href="http://scielo.iec.gov.br/pdf/ess/v28n2/2237-9622-ess-28-02-e20190223.pdf" target="_blank"
-            style="color: #1592E6;">http://scielo.iec.gov.br/pdf/ess/v28n2/2237-9622-ess-28-02-e20190223.pdf</a>. Acesso
-        em: 5 out. 2021.
-    </p>
-
-    <p>
-        DONABEDIAN, A.
-        <b>Garantía y Monitoría de Calidad de la Atención Médica</b>: Un texto introductorio. México: Ed. Instituto
-        Nacional de
-        Salud Pública, 1990.
-    </p>
+    </div>
 </div>

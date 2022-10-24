@@ -1,21 +1,21 @@
-/* @import url(http://fonts.googleapis.com/css?family=Poppins:400,100,100italic,700,700bold,800bold,500,500bold); */
-/* @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap); */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+
 
 @font-face {
-    font-family: "Poppins";
-    src: url('../recursos/fonts/Poppins-Regular.ttf');
+    font-family: "Segoe";
+    src: url('../recursos/fonts/Segoe-UI.ttf');
 }
 
-@font-face {
+/* @font-face {
     font-family: "Poppins";
     src: url('../recursos/fonts/Poppins-Bold.ttf');    
     font-weight: bold;
-}
+} */
 
 html,
 body,
 html * {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Segoe', sans-serif;
     line-height: 1.2;
 }
 
@@ -238,8 +238,8 @@ h6 {
 }
 
 h1 {
-    color: #004D73;
-    font-size: 18px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 40px;
     font-weight: bold;
 }
 
@@ -268,7 +268,7 @@ li {
 .objetivo-modal {
     height: 183px;
     width: 540px;
-    background-color: #FF592A;
+    background-color: #FAC900;
     margin: 100px auto;
     padding-left: 30px;
     padding-right: 30px;
@@ -292,7 +292,7 @@ li {
 .saiba-mais-modal {
     height: 184px;
     width: 470px;
-    background-color: #FF592A;
+    background-color: #FAC900;
     margin: 164px auto;
     padding-left: 30px;
     padding-right: 30px;
@@ -313,7 +313,7 @@ li {
 .saiba-mais-modal .close {
     width: 20px;
     height: 20px;
-    background-color: #FF592A;
+    background-color: #FAC900;
     position: absolute;
     right: 0px;
     top: -24px;

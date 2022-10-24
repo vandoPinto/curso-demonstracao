@@ -1,23 +1,71 @@
 <style>
-    p {
-        font-size: 14px;
+    .triangulo {
+        border-left: 200px solid transparent;
+        border-right: 0px solid transparent;
+        border-bottom: 200px solid #ffc000;
+        position: absolute;
+        top: 280px;
+        left: 660px;
     }
 </style>
-<div style="margin-left: 29px;margin-top: 23px;width: 848px;">
-    <p>
-        SILVA, G. S.; ALVES, C. R. L. A.
-        Avaliação do grau de implantação dos atributos da atenção primária à saúde como indicador da qualidade da
-        assistência prestada às crianças. <b>Cadernos de Saúde Pública</b>, Rio de Janeiro, v. 35, n. 2, e00095418,
-        fev.
-        2019.
-        Disponível em: <a href="https://www.scielo.br/j/csp/a/k9MtfkrkHfs4gKZc6G7KwZv/?format=pdf&amp;lang=pt"
-            target="_blank"
-            style="color: #1592E6;">https://www.scielo.br/j/csp/a/k9MtfkrkHfs4gKZc6G7KwZv/?format=pdf&amp;lang=pt</a>.
-        Acesso em: 5 out. 2021.
-    </p>
-    <p>
-        STARFIELD, B. <b>Atenção Primária</b>: equilíbrio entre necessidades de saúde, serviços e tecnologia. Brasília:
-        UNESCO;
-        Ministério da Saúde, 2002.
-    </p>
+<div style="padding: 40px;">
+    <div class="triangulo"></div>
+    <div style="border-style: solid;border-color: black;width: 800px;height: 420px;position: absolute;">
+
+
+        <div class="coluna-esquerda altura-1_1 largura-1_3 centro">
+            <img src="recursos/imgs/T5.png" style="top: 0px;left: 0px;width: 116px;">
+        </div>
+        <div style="margin-left: 150px;margin-top: 126px;">
+            <div>
+                <p style="color: #FFA800;font-size: 20px;font-weight: bolder;">Apoio matricial/matriciamento</p>
+                <p style="width: 619px;margin-top: 40px;">O <strong
+                        style="width: 40px; background-color: #1F6D4C; display: inline;"><a id="hotWord-bt"
+                            style="cursor: pointer;">apoio matricial</a></strong>, também conhecido como
+                    matriciamento, é um
+                    arranjo
+                    organizacional
+                    e um método de compartilhamento de
+                    conhecimentos que permite o suporte técnico pedagógico e institucional para retaguarda
+                    especializada
+                    para as equipes
+                    responsáveis pela construção de ações para a população adscrita, nomeadas equipes de referência
+                    (LAZARINO <i>et al.</i>, 2019).</p>
+            </div>
+        </div>
+        <div id="conteudo"
+            style="position: absolute; background-color: rgb(31, 109, 76); top: 220px; left: 20px; width: 690px; border-radius: 10px; flex-direction: column; align-items: center; justify-content: center; display: none;">
+            <p style="width: 630px;font: normal normal normal 14px/18px Poppins;color: #FFFFFF;margin-left: 27px;">
+                É um modo de produzir saúde em que duas ou mais equipes, num processo de construção
+                compartilhada, criam uma proposta de
+                intervenção pedagógico-terapêutica. Distingue-se do atendimento realizado por um
+                especialista
+                dentro de uma unidade de
+                APS tradicional. A proposta integradora do matriciamento visa transformar a lógica
+                tradicional
+                dos sistemas de saúde:
+                encaminhamentos, referência e contrarreferência, protocolos e centros de regulação. Na
+                horizontalização decorrente do
+                processo de matriciamento, o sistema de saúde se reestrutura em dois tipos de equipes:
+                equipe de
+                referência e equipe de
+                apoio matricial. Os efeitos burocráticos e pouco dinâmicos da lógica tradicional podem ser
+                atenuados por ações
+                horizontais que integrem os componentes e seus saberes nos diferentes níveis de atenção
+                (CHIAVERINI, 2011).</p>
+        </div>
+        <script>
+            $(() => {
+                let conteudo = $('#conteudo').hide();
+                $('#hotWord-bt').css('cursor', 'pointer').hover(() => {
+                    conteudo.fadeIn()
+                })
+                $('#hotWord-bt').mouseout(() => {
+                    conteudo.fadeOut()
+                })
+            })
+        </script>
+
+
+    </div>
 </div>

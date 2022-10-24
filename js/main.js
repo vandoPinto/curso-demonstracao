@@ -110,7 +110,7 @@ function playAudio(texto) {
     audio.cancel();
     var msg = new SpeechSynthesisUtterance();
     msg.text = texto;
-    audio.speak(msg);
+    // audio.speak(msg);
 }
 
 function stopAudio(texto) {
