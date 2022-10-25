@@ -8,7 +8,25 @@
         left: 660px;
     }
 </style>
-<div style="padding: 40px;">
+<style>
+    .triangulo {
+        border-left: 200px solid transparent;
+        border-right: 0px solid transparent;
+        border-bottom: 200px solid #ffc000;
+        position: absolute;
+        top: 290px;
+        left: 660px;
+    }
+
+    h2 {
+        cursor: pointer;
+    }
+</style>
+<div style="display: flex;width: 850px;padding: 10px;justify-content: space-between;align-items: center;">
+    <h1 style="margin: 0px 0px 0px 30px;">Áudio</h1>
+    <h2 onclick="carregarTela(26);">Voltar para Menu</h2>
+</div>
+<div style="margin-top: -10px;padding:0px 40px 40px 40px;">
     <div class="triangulo"></div>
     <div style="border-style: solid;border-color: black;width: 800px;height: 420px;position: absolute;">
 
