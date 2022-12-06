@@ -1,89 +1,163 @@
 <style>
-    .triangulo {
-        border-left: 200px solid transparent;
-        border-right: 0px solid transparent;
-        border-bottom: 200px solid #ffc000;
-        position: absolute;
-        top: 290px;
-        left: 660px;
+    ul>li {
+        margin-bottom: 5px;
+        color: #fff;
     }
 
-    h2 {
-        cursor: pointer;
+    .col {
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 90%;
+        height: 250px;
+        margin-left: 40px;
+    }
+
+
+    .col>div {
+        margin: 0 10px;
+    }
+
+    /* Cards */
+
+    .scene {
+        display: inline-block;
+    }
+
+    .card {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        cursor: pointer !important;
+        transform-style: preserve-3d;
+        transform-origin: center right;
+        transition: transform 1s;
+    }
+
+    .card.flip {
+        transform: translateX(-105%) rotateY(-180deg);
+    }
+
+    .card-face {
+        width: 95%;
+        position: absolute;
+        text-align: center;
+        backface-visibility: hidden;
+    }
+
+
+
+    .card-face-back {
+        display: flex;
+        align-items: center;
+        width: 359px;
+        height: 248px;
+        padding: 10px;
+        color: #fff;
+        background-color: #167a56;
+        transform: rotateY(180deg);
+    }
+
+    p {
+        font-size: 11px;
     }
 </style>
-<div style="display: flex;width: 850px;padding: 10px;justify-content: space-between;align-items: center;">
-    <h1 style="margin: 0px 0px 0px 30px;">Botão Janela</h1>
-    <h2 onclick="carregarTela(26);">Voltar para Menu</h2>
-</div>
-<div style="margin-top: -10px;padding:0px 40px 40px 40px;">
-    <div class="triangulo"></div>
-    <div style="border-style: solid;border-color: black;width: 800px;height: 420px;position: absolute;">
-        <div>
-            <div style="height: 72px; width: 100%; background-color: #FAC900; ">
-                <div style="background-color: white; width: 17px; height: 66px; margin-left: 19px; display: flex;">
-                    <img style="height: 44px; margin-top: 12.8px; margin-left: 68.45px;" src="recursos/imgs/SI_H1.png">
-                    <img style="height: 73px; margin-left:170.85px;" src="recursos/imgs/SI_H2.png">
-                    <img style="height: 46.8px; width:56.75px;  position: absolute; right: 1px;"
-                        src="recursos/imgs/SI_H3.png">
-                </div>
-                <div class="coluna-esquerda largura-1_3 animate__animated animate__backInDown">
-                    <img style="height: 293px;margin-top: 5px;" src="recursos/imgs/SI_22.png">
-                </div>
-                <div class="coluna-direita largura-2_1">
-                    <div style="width: 533px;margin-top: 25px;margin-right: 37px;">
-                        <p>Ao observarmos as especificidades da população carcerária brasileira, especialmente
-                            quanto à lotação e ao
-                            número de vagas disponíveis, podemos identificar a dificuldade de manter condições
-                            mínimas de salubridade e
-                            de respeito às individualidades,
-                            em determinados ambientes. (RANGEL; BICALHO, 2017).</p>
-                        <p>Todos aqueles que frequentam habitualmente o ambiente prisional podem evoluir em termos
-                            de adoecimento,
-                            portanto um espaço saudável e salubre tende a ser benéfico para todos.</p>
-                        <p style="color: #004D73;"><strong>Clique no botão Saiba mais e veja quem são as pessoas
-                                privadas de
-                                liberdade.</strong></p>
-                    </div>
-                    <!-- Botao modal -->
-                    <div style="text-align: center; padding-right: 32px; padding-top: 17px; cursor: pointer;"
-                        class="btn animate__animated animate__tada" data-toggle="modal" data-target="#modalCentro">
-                        <img style="height: 65px; width: 182px;" src="recursos/imgs/SI_09_02.png">
-                    </div>
-                    <!-- Fim botao Modal -->
-                </div>
-                <!-- Modal -->
-                <div class="modal fade saiba-mais" id="modalCentro" tabindex="-1"
-                    aria-labelledby="TituloModalCentralizado" style="overflow-y: hidden; display: none;"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered " role="document" style="width: 470px;">
-                        <div class="modal-content saiba-mais-modal">
-                            <div>
-                                <div data-dismiss="modal" class="close" aria-hidden="true">×</div>
-                                <img class="icone-image" src="recursos/imgs/SI_M_01.png">
-                                <h2 style="margin-top: 15px; margin-bottom: 15px;">Saiba mais!</h2>
-                                <p>As pessoas privadas de liberdade são aquelas “com idade superior a 18 (dezoito)
-                                    anos e que estejam
-                                    sob a custódia do Estado em caráter provisório ou sentenciados para cumprimento
-                                    de pena privativa de
-                                    liberdade ou medida de segurança [...]”.</p>
-                                <div class="centro"
-                                    style="width: 306px; height: 15px; background-color: #FAC900; color: white;">
-                                    <p><strong>(Portaria Interministerial nº 1, de 2 de janeiro de 2014)</strong>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Fim modal -->
-                <footer style="height: 39.05px; width: 100%; background-color: #FAC900;">
-                    <img style="height: 22.65px; width:256.8px; margin: 8.5px 37.05px;" src="recursos/imgs/SI_F1.png">
-                    <img style="height: 23px; margin: 8.5px 37.05px; position: absolute; right: 0px;"
-                        src="recursos/imgs/SI_F2.png">
-                </footer>
-            </div>
 
+<div class="largura-1_1">
+    <img style="width:100%; right: 0px;" src="recursos/imgs/RI_05.svg">
+</div>
+
+
+
+<div class="coluna-esquerda largura-1_1 ">
+    <div style="margin: 20px auto; width: 90%;">
+        <p>Clique nos infográficos e conheça os princípios e os objetivos da Política Nacional da Assistência Social
+            (2005).</p>
+    </div>
+</div>
+
+<div class="coluna esquerda largura-1_1 scene scene--card">
+    <div class="col">
+        <div class="card">
+            <div class="card-face"><img src="recursos/imgs/RI_09a.svg"></div>
+            <div class="card-face card-face-back">
+                <ul>
+                    <li>
+                        1. Supremacia do atendimento às necessidades sociais sobre as exigências de rentabilidade
+                        econômica.
+                    </li>
+                    <li>
+                        2. Universalidade dos direitos sociais, a fim de tornar o destinatário da ação assistencial
+                        alcançável pelas demais políticas públicas.
+                    </li>
+                    <li>
+                        3. Respeito à dignidade do cidadão, à sua autonomia e ao seu direito a benefícios e serviços
+                        de
+                        qualidade, bem como à convivência familiar e comunitária, vedando-se qualquer comprovação
+                        vexatória de necessidades.
+                    </li>
+                    <li>
+                        4. Igualdade de direitos no acesso ao atendimento, sem discriminação de qualquer natureza,
+                        garantindo-se equivalência às populações urbanas e rurais.
+                    </li>
+                    <li>
+                        5. Divulgação ampla dos benefícios, serviços, programas e projetos assistenciais, bem como
+                        dos
+                        recursos oferecidos pelo Poder Público e dos critérios para sua concessão.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-face"><img src="recursos/imgs/RI_10b.svg"></div>
+            <div class="card-face card-face-back">
+                <ul>
+                    <li>
+                        - Prover serviços de Assistência Social, projetos e benefícios de proteção social básica
+                        e/ou
+                        especial para famílias, indivíduos e grupos que deles necessitarem.
+                    </li>
+                    <li>
+                        - Contribuir com a inclusão e a equidade dos usuários e grupos específicos, ampliando o
+                        acesso
+                        aos bens e serviços socioassistenciais básicos e especiais, em áreas urbanas e rurais.
+                    </li>
+                    <li>
+                        - Assegurar que as ações no âmbito da assistência social tenham centralidade na família e
+                        que
+                        garantam a convivência familiar e comunitária.
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>
+
+<div class="coluna-esquerda largura-1_1 ">
+    <div style="margin: 30px auto; width: 90%;">
+        <p>
+            A assistência social também se organiza em níveis de complexidade, como a saúde. No entanto, devido às
+            características dessa política pública, esses níveis são chamados de proteção social básica e proteção
+            social especial, este último subdividido em proteção especial de média complexidade e de alta
+            complexidade.
+            Acompanhe!
+        </p>
+    </div>
+</div>
+
+
+<footer style="padding: 0;">
+    <div class="largura-1_1">
+        <img style="width:100%;  right: 0px;" src="recursos/imgs/RI_28.svg">
+    </div>
+</footer>
+
+<script>
+    var cards = document.querySelectorAll('.card');
+
+    [...cards].forEach(card => {
+        card.addEventListener('click', function () {
+            card.classList.toggle('flip');
+        });
+    });
+</script>

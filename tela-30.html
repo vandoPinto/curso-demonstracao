@@ -1,178 +1,233 @@
-<style>
-    .triangulo {
-        border-left: 200px solid transparent;
-        border-right: 0px solid transparent;
-        border-bottom: 200px solid #ffc000;
-        position: absolute;
-        top: 290px;
-        left: 660px;
-    }
+<!-- <style>
 
-    h2 {
+    /* Tab botões */
+    
+    .tab {
+        float: left;
+        width: 30%;
+        height: 300px;
+        margin-left: 20px;
+    }
+    
+    
+    .tab button {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #fff;
+        background-color: #167A56;
+        font-weight: 600;
+        padding: 10px 15px;
+        margin-bottom: 6.2px;
+        width: 100%;
+        border: none;
+        outline: none;
+        text-align: left;
         cursor: pointer;
+        transition: 0.3s;
+        font-size: 0.8rem;
+    } 
+    
+    /* Tab Body */
+    
+    .tabcontent {
+        float: left;
+        background-color: #344ca4 !important;
+        color: #fff;
+        padding: 20px 50px;
+        border: none;
+        width: 55%;
+        border-left: none;
+        height: 280px;
+        overflow-y: scroll;
     }
 
-    .flip-box {
-        background-color: transparent;
-        width: 95px;
-        /* height: 275px; */
-        border: 1px solid #f1f1f1;
-        perspective: 1000px;
+    .tab button:focus{
+        background-color: #344ca4;
+        margin-right: -5px;
     }
 
-    .flip-box-inner {
-        position: relative;
-        width: 95px;
-        /* height: 275px; */
-        text-align: center;
-        transition: transform 0.8s;
-        transform-style: preserve-3d;
+    .tab>button.active{
+        background-color: #344ca4;
     }
 
-    .flip-box-inner:hover {
-        transform: rotateY(180deg);
+    .tab img{
+        width: 8%;
     }
 
-    .flip-box-front,
-    .flip-box-back {
-        position: absolute;
-        width: 95px;
-        /* height: 275px; */
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
+    .tabcontent::-webkit-scrollbar {
+        width: 10px;   
     }
 
-    .flip-box-front {
-        background-color: #bbb;
-        color: black;
+    .tabcontent::-webkit-scrollbar-track {
+        background: var(--color-gray); 
+                
     }
 
-    .flip-box-back {
-        background-color: #004c72;
-        color: white;
-        transform: rotateY(180deg);
+    .tabcontent::-webkit-scrollbar-thumb {
+        background-color: var(--color-yellow)  ;     
+    }
+    </style> -->
+
+<style>
+    h1 {
+        color: #fff;
+        font-size: 18px;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+
+    p {
+        font-size: 11px;
+    }
+
+    .tab {
+        overflow: hidden;
+        display: flex;
+        width: 100%;
+    }
+
+    .tab button {
+        float: left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        background-color: #167A56;
+        font-weight: 900;
+        padding: 10px 15px;
+        margin-right: 6.2px;
+        border: none;
+        outline: none;
+        text-align: left;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 0.8rem;
+    }
+
+    .tab button.active {
+        background-color: #344ca4;
+    }
+
+    .tabcontent {
+        display: none;
+        border-top: none;
+        float: left;
+        background-color: #344ca4 !important;
+        color: #fff;
+        padding: 20px 50px;
+        border: none;
+        width: 84.7%;
+        border-left: none;
+        height: 250px;
+    }
+
+    .in-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        gap: 60px;
     }
 </style>
-<div style="display: flex;width: 850px;padding: 10px;justify-content: space-between;align-items: center;">
-    <h1 style="margin: 0px 0px 0px 30px;">Botão Janela</h1>
-    <h2 onclick="carregarTela(26);">Voltar para Menu</h2>
+
+<div class="largura-1_1">
+    <img style="width:100%; right: 0px;" src="recursos/imgs/RI_05.svg">
 </div>
-<div style="margin-top: -10px;padding:0px 40px 40px 40px;">
-    <div class="triangulo"></div>
-    <div style="border-style: solid;border-color: black;width: 800px;height: 420px;position: absolute;">
+<div style="margin: 20px 97px;">
 
-
-
-        <div style="height: 72px; width: 100%; background-color: #004c72; ">
-            <div style="background-color: white; width: 17px; height: 66px; margin-left: 19px; display: flex;">
-                <img style="height: 43.5px; width:180px; margin-top: 12.8px; margin-left: 68.45px;"
-                    src="recursos/imgs/SI_H1.png">
-                <img style="height: 73px; margin-left:170.85px;" src="recursos/imgs/SI_H2.png">
-                <img style="height: 46.8px; width:56.75px;  position: absolute; right: 1px;"
-                    src="recursos/imgs/SI_H3.png">
-            </div>
-            <div class="coluna-esquerda largura-1_1">
-                <div style="margin-top: 25px;margin-left: 110px;width: 650px;">
-                    <p>Vejamos alguns exemplos para que você possa compreender melhor os conceitos
-                        de<strong>
-                            doença</strong> e
-                        de<strong> agravo.</strong></p>
-                    <p><strong style="color: #004c72;">Passe o mouse</strong> sobre as imagens para entender
-                        mais a
-                        respeito das situações ilustradas.</p>
-                    <div style="margin-top: 7px;margin-left: 37px;display: flex;">
-                        <div class="flip-box">
-                            <div class="flip-box-inner">
-                                <div class="flip-box-front">
-                                    <img style=" width: 95px;" src="recursos/imgs/SI_13a.png">
-                                </div>
-                                <div class="flip-box-back">
-                                    <p
-                                        style="margin: auto;margin-top: 65px;padding: 10px;text-align: center;color: white;font-size: 10px;">
-                                        Uma
-                                        idosa de 63 anos, diabética, que perde a visão em decorrência das
-                                        complicações da doença mal
-                                        controlada.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flip-box">
-                            <div class="flip-box-inner">
-                                <div class="flip-box-front">
-                                    <img style=" width: 95px;" src="recursos/imgs/SI_13b.png">
-                                </div>
-                                <div class="flip-box-back">
-                                    <p
-                                        style="margin: auto;margin-top: 5px;padding: 10px;text-align: center;color: white;font-size: 10px;">
-                                        Uma
-                                        criança que sofre um atropelamento quando estava a andar de
-                                        bicicleta e que,
-                                        por
-                                        consequência, sofre uma lesão na
-                                        coluna, perdendo a movimentação das pernas.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flip-box">
-                            <div class="flip-box-inner">
-                                <div class="flip-box-front">
-                                    <img style=" width: 95px;" src="recursos/imgs/SI_13c.png">
-                                </div>
-                                <div class="flip-box-back">
-                                    <p
-                                        style="margin: auto;margin-top: -6px;padding: 10px;text-align: center;color: white;font-size: 10px;">
-                                        Um
-                                        adolescente que tem dificuldades de conviver em sociedade devido à
-                                        depressão
-                                        e que, em razão
-                                        disso, tenta
-                                        autoagressão e acaba provocando grandes cortes no braço.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flip-box">
-                            <div class="flip-box-inner">
-                                <div class="flip-box-front">
-                                    <img style=" width: 95px;" src="recursos/imgs/SI_13d.png">
-                                </div>
-                                <div class="flip-box-back">
-                                    <p
-                                        style="margin: auto;margin-top: 53px;padding: 10px;text-align: center;color: white;font-size: 10px;">
-                                        Uma
-                                        gestante que adquire catapora ao entrar em contato com uma criança
-                                        da
-                                        vizinhança que está
-                                        com a doença.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flip-box">
-                            <div class="flip-box-inner">
-                                <div class="flip-box-front">
-                                    <img style=" width: 95px;" src="recursos/imgs/SI_13e.png">
-                                </div>
-                                <div class="flip-box-back">
-                                    <p
-                                        style="margin: auto;margin-top: 6px;padding: 10px;text-align: center;color: white;font-size: 10px;">
-                                        Um
-                                        trabalhador urbano que recolhe lixo e é exposto a lixo hospitalar
-                                        radioativo, descartado
-                                        indevidamente, e que
-                                        desenvolve queimaduras ou algum tipo de câncer.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <footer style="height: 39.05px; width: 100%; background-color: #004c72;">
-                <img style="height: 22.65px; margin: 8.5px 37.05px;" src="recursos/imgs/SI_F1.png">
-                <img style="height: 22.75px; margin: 8.5px 37.05px; position: absolute; right: 0px;"
-                    src="recursos/imgs/SI_F2.png">
-            </footer>
-        </div>
-
+    <div class="tab">
+        <button class="tablinks bg-btn5 active" onclick="openTab(event, 'inicio')" id="defaultOpen">Início</button>
+        <button class="tablinks bg-btn5" onclick="openTab(event, 'comunicacao')">Manter canal aberto de
+            comunicação</button>
+        <button class="tablinks bg-btn1" onclick="openTab(event, 'olhar')">Olhar para o outro</button>
+        <button class="tablinks bg-btn2" onclick="openTab(event, 'escutar')">Escutar atentamente</button>
+        <button class="tablinks bg-btn3" onclick="openTab(event, 'respeitar')">Respeitar pausas silenciosas</button>
 
     </div>
+
+    <div id="inicio" class="tabcontent" style="display: block;">
+        <div style="margin: 75px auto; width:90%;">
+            <h1>Comunicação é uma técnica</h1>
+            <p>A comunicação e a comunicação terapêutica, apesar de amplamente discutidas nas relações entre usuário
+                e profissional, podem e devem ser discutidas nas relações entre trabalhadores. Alguns de seus
+                princípios norteadores devem ser conhecidos e usados na comunicação da equipe. Clique nas abas para
+                saber como.</p>
+        </div>
+    </div>
+
+    <div id="comunicacao" class="tabcontent" style="display: none;">
+        <div class="in-content" style="margin-top: 40px;">
+            <p><strong>Manter canal aberto de comunicação</strong>: é importante que todos os membros de uma equipe
+                de saúde da família tenham a possibilidade de dialogar a qualquer tempo entre si, que as relações
+                interpessoais não sejam assimétricas a ponto de não permitir que um agente comunitário de saúde não
+                se sinta confortável e seguro em questionar uma fala de um profissional de nível superior, que não
+                permita que o técnico de enfermagem possa questionar o trabalho do profissional enfermeiro, e assim
+                com outras categorias que se inter-relacionam no trabalho cotidiano.</p>
+            <img src="recursos/imgs/RI_02a.svg" style="width: 30%;">
+        </div>
+    </div>
+
+    <div id="olhar" class="tabcontent" style="display: none;">
+        <div class="in-content" style="margin-top: 40px;">
+            <img src="recursos/imgs/RI_03a.svg" style="width: 30%;">
+            <p><strong>Olhar para o outro</strong>: como todo e qualquer espaço de troca, é fundamental que os
+                trabalhadores possam se olhar em um processo de diálogo, mostrando que se preocupam verdadeiramente
+                com a opinião do outro, com pontos de vista diferentes do seu, que possam olhar suas expressões de
+                face e corpo, que possam apresentar seus incômodos e inquietações com determinados assuntos/pautas.
+            </p>
+        </div>
+    </div>
+
+    <div id="escutar" class="tabcontent" style="display: none;">
+        <div class="in-content" style="margin-top: 40px;">
+            <p><strong>Escutar atentamente</strong>: apesar de óbvio, nem sempre se constitui tarefa simples escutar
+                o outro, em especial falas que muitas vezes se repetem.<br><br>
+                [...] O ato de escutar atentamente implica compartilhar um momento e buscar significados não só à
+                mensagem recebida, mas à pessoa que transmite seu conteúdo fundamentado na relação de ajuda e
+                interesse pelas suas necessidades. [...] (BERTACHINI, 2012, p. 516).</p>
+            <img src="recursos/imgs/RI_09b.svg" style="width: 30%;">
+        </div>
+    </div>
+
+    <div id="respeitar" class="tabcontent" style="display: none;">
+        <div class="in-content" style="margin-top: 40px;">
+            <img src="recursos/imgs/RI_10a.svg" style="width: 30%;">
+            <p><strong>Respeitar pausas silenciosas</strong>: respeitar os momentos de pausas em uma discussão em
+                equipe ou de choro durante determinada fala é fundamental para que o indivíduo sinta-se acolhido,
+                ouvido, e que tenha seus sentimentos validados pelo grupo.</p>
+        </div>
+    </div>
+
 </div>
+
+<footer style="padding: 0;">
+    <div class="largura-1_1">
+        <img style="width:100%;  right: 0px;" src="recursos/imgs/RI_26.svg">
+    </div>
+</footer>
+
+<script>
+    function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+    for (let tab of document.querySelectorAll('.tabcontent')) {
+        tab.onscroll = function (e) {
+            var topOfDiv = Math.max(e.target.scrollTop - 2, 0);
+            e.target.querySelector('div').style.top = topOfDiv + 'px';
+        }
+    }
+
+    document.getElementById("defaultOpen").click();
+</script>

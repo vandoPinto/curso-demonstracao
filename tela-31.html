@@ -1,107 +1,64 @@
 <style>
-    .triangulo {
-        border-left: 200px solid transparent;
-        border-right: 0px solid transparent;
-        border-bottom: 200px solid #ffc000;
-        position: absolute;
-        top: 290px;
-        left: 660px;
+    .modal-backdrop {
+        background-color: #fff !important;
     }
 
-    h2 {
-        cursor: pointer;
+    h1 {
+        font-size: 18px;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: #344CA4;
+    }
+
+    p {
+        font-size: 11px;
     }
 </style>
-<div style="display: flex;width: 850px;padding: 10px;justify-content: space-between;align-items: center;">
-    <h1 style="margin: 0px 0px 0px 30px;">Botão Janela</h1>
-    <h2 onclick="carregarTela(26);">Voltar para Menu</h2>
+
+<div class="largura-1_1">
+    <img style="width:100%; right: 0px;" src="recursos/imgs/RI_05.svg">
 </div>
-<div style="margin-top: -10px;padding:0px 40px 40px 40px;">
-    <div class="triangulo"></div>
-    <div style="border-style: solid;border-color: black;width: 800px;height: 420px;position: absolute;">
 
-
-        <div style="height: 72px; width: 100%; background-color: #004c72; ">
-            <div style="background-color: white; width: 17px; height: 66px; margin-left: 19px; display: flex;">
-                <img style="height: 43.5px; width:180px; margin-top: 12.8px; margin-left: 68.45px;"
-                    src="recursos/imgs/SI_H1.png">
-                <img style="height: 73px; margin-left:170.85px;" src="recursos/imgs/SI_H2.png">
-                <img style="height: 46.8px; width:56.75px;  position: absolute; right: 1px;"
-                    src="recursos/imgs/SI_H3.png">
-            </div>
-        </div>
-        <div class="coluna-esquerda largura-1_2 ">
-            <div style="margin-top: 100px;margin-left: 50px;width: 365px;">
-                <p>Considerando as informações da tabela anterior, você saberia responder em quantas vezes aumenta o
-                    risco de
-                    adoecimento por TB entre pessoas privadas de liberdade se comparado com a população geral?</p>
-                <p><strong style="color:  #004c72;">Clique</strong> na resposta correspondente.</p>
-            </div>
-        </div>
-        <div class="coluna-direita largura-1_2 animate__animated animate__backInRight"
-            style="margin-top: 35px;display: grid;margin-right: 100px;height: 230px;">
-            <div id="botao_1"
-                style="width: 250px;height: 96px;background-color: rgb(129, 97, 255);cursor: pointer;border-radius: 10px;">
-                <p style=" color: white; font-size: 35px; font-weight: bold; text-align: center;">35 vezes</p>
-            </div>
-            <div id="botao_2"
-                style="width: 250px;height: 96px;background-color: rgb(129, 97, 255);cursor: pointer;border-radius: 10px;">
-                <p style=" color: white; font-size: 35px; font-weight: bold; text-align: center;">28 vezes</p>
-            </div>
-        </div>
-        <div style="position: absolute; margin-top: 110px; margin-left: 120px; width: 610px; height: 160px; background-color: rgb(0, 76, 114); border-radius: 10px; cursor: pointer; display: none;"
-            id="janela_1">
-            <img style="height: 70px; margin-top: -48px; margin-left: 30px;margin-bottom: 15px;"
-                src="recursos/imgs/SI_CE.png">
-            <h2 style="margin-left: 30px; color: #fac900;">Resposta correta</h2>
-            <p style="margin-left: 30px;width: 560px;color: white;">Isso mesmo! A chance de adoecer por TB entre as
-                pessoas
-                privadas de liberdade é 35 vezes maior do que na população
-                geral. Além disso, você percebeu que mais de onze porcento de todos os novos casos de TB registrados
-                em
-                2019, no
-                Brasil,
-                foram diagnosticados nas unidades prisionais?</p>
-        </div>
-        <div style="position: absolute; margin-top: 110px; margin-left: 120px; width: 610px; height: 160px; background-color: rgb(0, 76, 114); border-radius: 10px; cursor: pointer; display: none;"
-            id="janela_2">
-            <img style="height: 70px; margin-top: -48px; margin-left: 30px;margin-bottom: 15px;"
-                src="recursos/imgs/SI_CE.png">
-            <h2 style="margin-left: 30px; color: #fac900;">Resposta incorreta</h2>
-            <p style="margin-left: 30px; width: 550px; color: white;">Na verdade, a chance de adoecer por TB entre
-                as
-                pessoas
-                privadas de liberdade é 35 vezes maior do que na população
-                geral. Além disso, você percebeu que mais de onze porcento de todos os novos casos de TB registrados
-                em
-                2019, no
-                Brasil,
-                foram diagnosticados nas unidades prisionais?</p>
-        </div>
-        <footer style="height: 39.05px; width: 100%; background-color: #004c72;">
-            <img style="height: 29px;margin: 6.5px 37.05px;" src="recursos/imgs/SI_F1.png">
-            <img style="height: 27px;margin: 8.5px 37.05px;position: absolute;right: 0px;"
-                src="recursos/imgs/SI_F2.png">
-        </footer>
-
+<div class="coluna-esquerda largura-1_1">
+    <div style="margin: 46px auto; margin-bottom: 20px; width: 50%; ">
+        <h1>Boa prática da unidade 2:</h1>
+        <p>Para consolidar seu conhecimento, vamos acompanhar o caso do senhor Antônio.</p>
+    </div>
+    <div style="text-align: center; cursor: pointer;" class="btn animate__animated animate__tada" data-toggle="modal"
+        data-target="#modalCentro">
+        <img src="recursos/imgs/RIC_07.svg" style="width: 51%; margin-left: 15px;">
     </div>
 </div>
-<script>
-    $(() => {
-        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
-        apagarJanelas();
-        let botoes = $(document).find('[id^=botao]').map((index, botao) => {
-            $(botao).css('cursor', 'pointer')
-            $(botao).click((e) => {
-                apagarJanelas();
-                $('#' + e.currentTarget.id).css('background-color', '#fac900');
-                $(janelas[index]).fadeIn();
-            })
-        })
-        function apagarJanelas() {
-            janelas.map((index, janela) => {
-                $(janela).hide();
-            })
-        }
-    })
+<!-- Modal -->
+<div class="modal fade" id="modalCentro" tabindex="-1" aria-labelledby="TituloModalCentralizado"
+    style="overflow-y: hidden; display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered " role="document">
+        <div class="modal-content" style="position: fixed; top: 72px; left: 0; width: 100%; height: 370px;">
+            <div data-dismiss="modal" class="close" aria-hidden="true" style="margin-left: auto; padding-right: 10px;">×
+            </div>
+            <video id="full-video" width="100%" height="345px" controls="">
+                <source src="recursos/video/RV_01.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+</div>
+<!-- Fim modal -->
+<footer style="padding: 0;">
+    <div class="largura-1_1">
+        <img style="width:100%;  right: 0px;" src="recursos/imgs/RI_04.svg">
+    </div>
+</footer>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.close').click(function (event) {
+            $("#full-video").get(0).pause();
+            $("#full-video").get(0).currentTime = 0;
+            event.preventDefault();
+        });
+        $('.btn').click(function (event) {
+            $("#full-video").get(0).currentTime = 0;
+            $("#full-video").get(0).play();
+        });
+    });
 </script>

@@ -3,7 +3,8 @@
         <img src="recursos/imgs/marcaDagua.svg" style="width: 420px;margin-top: 270px;">
     </div>
     <div style="position: absolute;top: 70px;">
-        <img class="animate__animated animate__backInLeft" src="recursos/imgs/webSite3.svg" style="width: 550px;margin-top: 70px;margin-left: 180px;">
+        <img class="animate__animated animate__backInLeft" src="recursos/imgs/webSite3.svg"
+            style="width: 550px;margin-top: 70px;margin-left: 180px;">
         <div style="display: flex;margin-left: 190px;width: 540px;align-items: center;justify-content: space-between;">
             <p style="width: 220px;text-align: center;font-size: 12px;">QESymposium</p>
             <p style="width: 247px;text-align: center;font-size: 12px;">OBHA<br> Observatório Brasileiro de Hábitos
@@ -11,4 +12,11 @@
         </div>
     </div>
 </div>
-=
+<!-- <button id="copia" style="width: 230px;height: 50px;position: absolute;right: 0;top: 100px;">Copiar</button> -->
+
+<script>
+    $(document).find('[id^=copia]').click((elemento) => {
+        navigator.clipboard.writeText($(document).contents().find('main').find('#tela').html());
+        console.log($(document).contents().find('main').find('#tela').html());
+    })
+</script>

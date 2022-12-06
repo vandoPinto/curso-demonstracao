@@ -1,160 +1,62 @@
 <style>
-    .triangulo {
-        border-left: 200px solid transparent;
-        border-right: 0px solid transparent;
-        border-bottom: 200px solid #ffc000;
-        position: absolute;
-        top: 290px;
-        left: 660px;
+    ul>li {
+        list-style-type: disc;
+        margin-left: 20px;
+        margin-bottom: 5px;
     }
 
-    h2 {
-        cursor: pointer;
+    h1 {
+        font-size: 18px;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: #344CA4;
     }
-
-    .jan {
-        z-index: 30;
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: rgba(0, 0, 0, .8);
-    }
+    p {
+    font-size: 11px;
+}
 </style>
-<div style="display: flex;width: 850px;padding: 10px;justify-content: space-between;align-items: center;">
-    <h1 style="margin: 0px 0px 0px 30px;">Botão Janela</h1>
-    <h2 onclick="carregarTela(26);">Voltar para Menu</h2>
+
+<div class="largura-1_1">
+    <img style="width:100%; right: 0px;" src="recursos/imgs/RI_05.svg">
 </div>
-<div style="margin-top: -10px;padding:0px 40px 40px 40px;">
-    <div class="triangulo"></div>
-    <div style="border-style: solid;border-color: black;width: 800px;height: 420px;position: absolute;">
 
-
-        <div style="height: 60px;width: 70px;">
-            <img style="height: 60px;position: absolute;right: 0px;width: 800px;" src="recursos/imgs/H1.png">
-            <p style="position: absolute;color: white;margin-left: 42px;margin-top: 26px;font-size: 12px;">
-                TÓPICO<strong>
-                    1</strong></p>
-            <p
-                style="position: absolute;color: white;margin-left: 112px;margin-top: 26px;font-size: 11px;width: 450px;">
-                TERRITÓRIO: USOS E APLICAÇÕES NO CAMPO DA SAÚDE</p>
-        </div>
-        <div style="display: flex;flex-direction: row;justify-content: space-between;">
-            <div style="margin-left: 45px;margin-top: 57px;width: 249px;">
-                <p>A partir desse conceito, e em convergência com as reflexões de Gondim e Monken (2017), podemos
-                    estabelecer
-                    cinco
-                    dimensões do território.
-                </p>
-                <p>Clique sobre cada uma delas para conhecê-las.</p>
-            </div>
-            <div class="coluna-direita animate__animated animate__backInRight">
-                <img style="margin-top: 16px;margin-right: 44px;width: 390px;" src="recursos/imgs/img-slide-13.svg">
-            </div>
-        </div>
-        <div>
-            <div id="botao_1" style="width: 140px;height: 90px;position: absolute;top: 74px;left: 490px;">
-            </div>
-            <div id="botao_2" style="width: 140px;height: 90px;position: absolute;top: 172px;left: 630px;">
-            </div>
-            <div id="botao_3" style="width: 140px;height: 90px;position: absolute;top: 277px;left: 580px;">
-            </div>
-            <div id="botao_5" style="width: 140px;height: 90px;position: absolute;top: 275px;left: 400px;">
-            </div>
-            <div id="botao_4" style="width: 140px;height: 90px;position: absolute;top: 173px;left: 347px;">
-            </div>
-        </div>
-        <div>
-            <div class="jan" id="janela_1" style=" display: none;">
-                <div
-                    style="position: absolute;top: 160px;left: 150px;width: 500px;height: 120px;background: #FFA800 0% 0% no-repeat padding-box;border-radius: 10px;">
-                    <p style="margin-top: 20px;margin-left: 200px;font-size: 14px;color: #FFFFFF;">ECONÔMICA</p>
-                    <p style="color: white;font-size: 12px;margin-top: 10px;margin-left: 32px;width: 449px;">
-                        (Des)territorialização como produto espacial do embate entre classes sociais e da relação
-                        capital-trabalho.</p>
-                    <p style="font-size: 13px;color: white;margin-top: -84px;margin-left: 480px;">x</p>
-                </div>
-            </div>
-            <div class="jan" id="janela_2" style=" display: none;">
-                <div
-                    style="position: absolute;top: 160px;left: 150px;width: 500px;height: 120px;background: #108141 0% 0% no-repeat padding-box;border-radius: 10px;">
-                    <p style="margin-top: 20px;margin-left: 190px;font-size: 14px;color: #FFFFFF;">JURÍDICA-POLÍTICA
-                    </p>
-                    <p style="color: white;font-size: 12px;margin-top: 10px;margin-left: 32px;width: 449px;">
-                        Espaço delimitado e controlado, onde se exerce certo poder, em especial, de caráter estatal.
-                    </p>
-                    <p style="font-size: 13px;color: white;margin-top: -84px;margin-left: 480px;">x</p>
-                </div>
-            </div>
-            <div class="jan" id="janela_3" style=" display: none;">
-                <div
-                    style="position: absolute;top: 160px;left: 150px;width: 500px;height: 120px;background: #F4BB2A 0% 0% no-repeat padding-box;border-radius: 10px;">
-                    <p style="margin-top: 20px;margin-left: 190px;font-size: 14px;color: #FFFFFF;">SANITÁRIA</p>
-                    <p style="color: white;font-size: 12px;margin-top: 10px;margin-left: 32px;width: 449px;">
-                        Espaços de produção social da saúde nos quais a população interage com objetos e ações.</p>
-                    <p style="font-size: 13px;color: white;margin-top: -84px;margin-left: 480px;">x</p>
-                </div>
-            </div>
-            <div class="jan" id="janela_4" style=" display: none;">
-                <div
-                    style="position: absolute;top: 160px;left: 150px;width: 500px;height: 120px;background: #1B8992 0% 0% no-repeat padding-box;border-radius: 10px;">
-                    <p style="margin-top: 20px;margin-left: 190px;font-size: 14px;color: #FFFFFF;">CULTURALISTA</p>
-                    <p style="color: white;font-size: 12px;margin-top: 10px;margin-left: 32px;width: 449px;">
-                        Resulta do processo de apropriação do espaço por pessoas e grupos, por meio da subjetividade
-                        ou da
-                        identidade social.</p>
-                    <p style="font-size: 13px;color: white;margin-top: -84px;margin-left: 480px;">x</p>
-                </div>
-            </div>
-            <div class="jan" id="janela_5" style=" display: none;">
-                <div
-                    style="position: absolute;top: 160px;left: 150px;width: 500px;height: 120px;background: #6DAFCC 0% 0% no-repeat padding-box;border-radius: 10px;">
-                    <p style="margin-top: 20px;margin-left: 190px;font-size: 14px;color: #FFFFFF;">AMBIENTAL</p>
-                    <p style="color: white;font-size: 12px;margin-top: 10px;margin-left: 32px;width: 449px;">
-                        Meio ambiente, habitat, ecossistema, objetos naturais. A natureza como energia vital a ser
-                        preservada.
-                    </p>
-                    <p style="font-size: 13px;color: white;margin-top: -84px;margin-left: 480px;">x</p>
-                </div>
-            </div>
-        </div>
-        <footer style="width: 800px;height: 19px;display: flex;background-color: #0D536A;">
-            <div style="margin-top: -8px;display: flex;margin-left: 12px;">
-                <p style="color: white;font-size: 12px;">MÓDULO 2</p>
-                <p style="margin-left: 15px;color: white;font-size: 11px;margin-top: 12px;">CONHECIMENTOS
-                    ESTRATÉGICOS PARA
-                    A GESTÃO DA ESF</p>
-                <p style="margin-left: 250px;color: white;font-size: 12px;">UNIDADE 4</p>
-                <p style="margin-left: 15px;color: white;font-size: 11px;margin-top: 12px;">TERRITÓRIO</p>
-            </div>
-        </footer>
-        <script>
-            $(() => {
-                let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
-                apagarJanelas();
-                $(document).find('[id^=btn]').hide();
-                let botoes = $(document).find('[id^=botao]').map((index, botao) => {
-                    $(botao).css('cursor', 'pointer');
-                    $(botao).hover(() => {
-                        $(document).find(`[id=btn_${index + 1}_2]`).show();
-                    });
-                    $(botao).mouseleave(() => {
-                        $(document).find('[id^=btn]').hide();
-                    });
-                    $(botao).click(() => {
-                        apagarJanelas();
-                        $(janelas[index]).fadeIn();
-                    })
-                })
-                function apagarJanelas() {
-                    janelas.map((index, janela) => {
-                        $(janela).hide();
-                    })
-                }
-            })
-        </script>
-
-
+<div class="coluna-esquerda largura-2_3 ">
+    <div style="margin: 63px auto; width: 75%;">
+        <h1>Pontos de atenção secundária de uma rede de atenção em saúde</h1>
+        <p>
+            Tendo em mente o que são as Redes de Atenção à Saúde, agora vamos estudar os pontos de Atenção
+            Secundária e
+            terciária de uma Rede de Atenção em Saúde.
+        </p>
+        <p>
+            Os pontos de atenção primária, secundária e terciária se diferenciam por suas respectivas densidades
+            tecnológicas, sendo os pontos de atenção terciária mais densos tecnologicamente que os pontos de atenção
+            secundária, por essa razão tendem a ser mais concentrados espacialmente. Contudo, na perspectiva das
+            redes
+            poliárquicas, não há entre eles relações de subordinação, já que todos são igualmente importantes para
+            se
+            atingirem os objetivos comuns das RASs.
+        </p>
+        <p>
+            Na organização dos pontos de atenção secundária, devem ser elaborados os protocolos clínicos que
+            normalizam,
+            em detalhes, toda a carteira de serviços ofertada. Assim, ficam claros os papéis das equipes de APS em
+            relação a cada condição de saúde e as situações em que as pessoas usuárias devem ser encaminhadas ao
+            ponto
+            de atenção secundária de uma RAS para uma interconsulta e sua devolução para a APS.
+        </p>
     </div>
 </div>
+
+<div class="coluna-direita largura-1_3 ">
+    <div style="margin: 0 auto; width: 80%;">
+        <a href="recursos/documentos/RD_01.pdf" target="_blank"><img src="recursos/imgs/RI_01.svg"
+                style="width:100%"></a>
+    </div>
+</div>
+
+<footer style="padding: 0;">
+    <div class="largura-1_1">
+        <img style="width:100%;  right: 0px;" src="recursos/imgs/RI_11.svg">
+    </div>
+</footer>
