@@ -1,108 +1,56 @@
 <style>
-    .accordion {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: flex-end;
-        gap: 10px;
-        width: 70%;
-        background-color: #167A56;
-        padding: 20px;
-        margin: 10px auto;
-        color: #fff;
-        cursor: pointer;
-        border: none;
-        outline: none;
-        text-align: left;
-        font-weight: 600;
-        font-size: 11px;
-        transition: 0.4s;
+    .modal-backdrop {
+        background-color: #fff !important;
     }
 
-    .accordion-align {
-        margin-left: auto;
-    }
 
-    .active {
-        background-color: #AFB2B4;
-    }
-
-    .accordion:hover {
-        background-color: #344CA4;
-    }
-
-    .panel {
-        width: 65%;
-        background-color: #344CA4 !important;
-        margin: 10px auto;
-        color: #fff;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.5s ease-out;
-    }
-
-    .panel-in {
-        display: flex;
-        gap: 50px;
-        padding: 20px;
-    }
-
-    .line-modal {
-        width: 60px;
-        height: 9px;
-        background-color: #FFCC00;
-        margin-bottom: 0;
-    }
 
     p {
         font-size: 11px;
     }
 </style>
 
-<div class="largura-1_1">
-    <img style="width:100%; right: 0px;" src="recursos/imgs/RI_05.svg">
+<div style="display: flex;justify-content: space-between;align-items: center;padding: 30px;">
+    <h1 style="font-size: 24px;">Recursos educacionais: Efeitos animados </h1>
 </div>
 
-<div style="margin-top: 40px;">
-    <button class="accordion">
-        <div class="line-modal"></div>
-        Mas como olhar para esses indicadores? Como esse olhar dialoga com as questões interpessoais da equipe?
-        Clique aqui para ver a resposta.
-        <img class="accordion-align" src="recursos/imgs/RIC_27.svg" style="width: 3%;">
-    </button>
-    <div class="panel">
-        <div class="panel-in">
-            <img src="recursos/imgs/RIC_28.svg" style="width: 30%;">
-            <p><strong>Resposta</strong>: Primeiramente, é importante que a equipe tenha tempo e dedicação para
-                olhar os resultados qualitativos e quantitativos de seu trabalho, sendo os indicadores fundamentais.
-                A partir daí, ela poderá avaliar o seu processo de trabalho, refletir sobre possibilidades e
-                necessidades de mudança na busca de melhores resultados e, consequentemente, melhorar a satisfação
-                no espaço de trabalho. Afinal, conseguir verificar o que conseguimos avançar em nosso trabalho nos
-                possibilita encontrar um sentido nele.</p>
-        </div>
+<div class="coluna-esquerda largura-1_2">
+
+    <div style="text-align: center; cursor: pointer;" class="btn animate__animated animate__tada" data-toggle="modal"
+        data-target="#modalCentro">
+        <img src="recursos/imgs/RIC_07.svg" style="width: 90%; margin-left: 15px;">
+    </div>
+    <br>
+    <div style="text-align: center; cursor: pointer;" class="btn animate__animated animate__backInUp" data-toggle="modal"
+        data-target="#modalCentro">
+        <img src="recursos/imgs/RIC_07.svg" style=" width: 90%; margin-left: 15px;">
     </div>
 </div>
+<div class="coluna-direita largura-1_2">
 
-<footer style="padding: 0;">
-    <div class="largura-1_1">
-        <img style="width:100%;  right: 0px;" src="recursos/imgs/RI_27c.svg">
+    <div style="text-align: center; cursor: pointer;" class="btn animate__animated animate__fadeInUpBig" data-toggle="modal"
+        data-target="#modalCentro">
+        <img src="recursos/imgs/RIC_07.svg" style=" width: 90%; margin-left: 15px;">
     </div>
-</footer>
+    <br>
+    <div style="text-align: center; cursor: pointer;" class="btn animate__animated animate__rollIn" data-toggle="modal"
+    data-target="#modalCentro">
+    <img src="recursos/imgs/RIC_07.svg" style="width: 90%; margin-left: 15px;">
+</div>
+</div>
 
-<script>
-    var acc = document.getElementsByClassName("accordion");
-    var i;
 
-    for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function () {
-            this.classList.toggle("active");
-            var panel = this.nextElementSibling;
-            if (panel.style.maxHeight) {
-                panel.style.maxHeight = null;
-            } else {
-                panel.style.maxHeight = panel.scrollHeight + "px";
-            }
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.close').click(function (event) {
+            $("#full-video").get(0).pause();
+            $("#full-video").get(0).currentTime = 0;
+            event.preventDefault();
         });
-    }
+        $('.btn').click(function (event) {
+            $("#full-video").get(0).currentTime = 0;
+            $("#full-video").get(0).play();
+        });
+    });
 </script>

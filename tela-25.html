@@ -1,22 +1,16 @@
-<div>
-    <div style="display: flex;justify-content: center;align-items: center;">
-        <img src="recursos/imgs/marcaDagua.svg" style="width: 420px;margin-top: 270px;">
+<div style="padding: 40px;">
+    <div style="display: flex;justify-content: space-between;align-items: center;">
+        <h1 style="font-size: 24px;">Web Sites</h1>
     </div>
-    <div style="position: absolute;top: 70px;">
-        <img class="animate__animated animate__backInLeft" src="recursos/imgs/webSite3.svg"
-            style="width: 550px;margin-top: 70px;margin-left: 180px;">
-        <div style="display: flex;margin-left: 190px;width: 540px;align-items: center;justify-content: space-between;">
-            <p style="width: 220px;text-align: center;font-size: 12px;">QESymposium</p>
-            <p style="width: 247px;text-align: center;font-size: 12px;">OBHA<br> Observatório Brasileiro de Hábitos
-                Alimentares</p>
+    <div style="display: flex;align-items: center;flex-direction:row;justify-content: flex-end;">
+        <div class="animate__animated animate__backInLeft" style="width: 45%; padding: 5px;">
+            <img src="recursos/imgs/websites/site1.png" style="width: 90%">
+            <p style="font-size: 14px;">Ambiente Virtual de Aprendizagem - Especialização Qualis</p>
         </div>
+        <div class="animate__animated animate__backInLeft" style="width: 45%;padding: 5px;">
+            <img src="recursos/imgs/websites/site2.png" style="width: 90%">
+            <p style="font-size: 14px;">Ambiente Virtual de Aprendizagem - Estratégia Saúde da Família</p>
+        </div>
+        
     </div>
 </div>
-<!-- <button id="copia" style="width: 230px;height: 50px;position: absolute;right: 0;top: 100px;">Copiar</button> -->
-
-<script>
-    $(document).find('[id^=copia]').click((elemento) => {
-        navigator.clipboard.writeText($(document).contents().find('main').find('#tela').html());
-        console.log($(document).contents().find('main').find('#tela').html());
-    })
-</script>

@@ -1,122 +1,217 @@
 <style>
-    .destaque-titulo {
-        width: 34%;
-        position: absolute;
-        top: 5%;
-        left: 9%;
-        background-color: #FFCC00;
-        text-transform: uppercase;
-        font-weight: 900;
-        color: #344CA4;
-        padding: 2px 15px;
+    /* Hide the images by default */
+    p {
+        font-size: 11px;
     }
 
-    .box-boas-p-main::-webkit-scrollbar-thumb {
-        background-color: #FFCC00;
-    }
-
-    .box-bp-col5 {
-        width: 35%;
-    }
-
-    .box-bp-col7 {
-        width: 65%;
-    }
-
-    .box-boas-p-main {
-        overflow-x: scroll;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
-        background-color: #344CA4;
-        width: 75%;
-        height: 210px;
-        margin: auto;
+    .mySlides {
+        display: none;
+        width: 80%;
+        background-color: #344ca4;
+        color: #fff;
+        margin: 10px auto;
+        margin-bottom: 0;
+        height: 329px;
         padding: 20px;
-        padding-top: 50px;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+        cursor: pointer;
+        position: absolute;
+        top: 79%;
+        width: auto;
+        margin: 0px 350px;
+        padding: 16px;
         color: #fff;
-        gap: 30px;
+        font-weight: bold;
+        font-size: 30px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
     }
 
-    p {
-        font-size: 11px;
+    /* Position the "next button" to the right */
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
     }
 
-    .destaque-titulo p {
-        margin: 0;
-        font-size: 19px;
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+        color: yellow;
     }
 
-    /* _________ */
-
-    .seta-right {
-        color: #fff;
-        float: right;
-        margin: 0;
-        margin-right: 40px;
+    /* Caption text */
+    .text {
+        color: #f2f2f2;
     }
 
-    p {
-        font-size: 11px;
+    /* Number text (1/3 etc) */
+    .numbertext {
+        color: #212121;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: relative;
+        top: 0;
     }
+
+    /* The dots/bullets/indicators */
+
+    .square-bottom {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: rgba(255, 255, 255, 0.3);
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .active,
+    .square-bottom:hover {
+        background-color: #ffcc00c7;
+    }
+
+    /* Fading animation 
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+*/
 </style>
 
-<div class="largura-1_1">
-    <img style="width:100%; right: 0px;" src="recursos/imgs/RI_05.svg">
+<div style="display: flex;justify-content: space-between;align-items: center;padding: 30px;">
+    <h1 style="font-size: 24px;">Recursos educacionais: Slides </h1>
 </div>
 
-<div class="coluna-esquerda largura-1_1">
-    <div style="width: 80%; margin:40px auto; margin-bottom: 0;">
-        <p>No modelo de acesso, a equipe deixa de trabalhar com agendas individuais e isoladas e passa a interagir
-            de forma multiprofissional, em que os trabalhadores podem ampliar, ainda durante o seu atendimento, a
-            capacidade de resolução de problemas simples, mas que não fazem parte de sua competência profissional.
-            Veremos agora um exemplo de boas práticas no modelo de acesso estudado.</p>
+
+
+<div class="slideshow-container">
+    <div class="mySlides fade" style="display: block;">
+        <img class="coluna-esquerda" src="recursos/imgs/RG_01.gif" style="width:40%; margin-top: 40px;">
+        <p style="width: 55%; margin-top: 110px;" class="coluna-esquerda">No Distrito Federal, as equipes Nasf-AB
+            são compostas de, no mínimo, farmacêutico, fonoaudiólogo, fisioterapeuta, nutricionista, psicólogo,
+            assistente social e terapeuta ocupacional.
+            <br><br>
+            Segundo a Portaria nº 489/2018, que organiza a atuação do Nasf-AB no Distrito Federal, compete a todos
+            os profissionais da equipe Nasf-AB:
+            <br><br>
+            <strong>Clique nas setas para avançar</strong>
+        </p>
     </div>
+
+    <div class="mySlides fade" style="display: none;">
+        <div style="margin:56px 40px">
+            <p>I - pactuar junto às equipes de Saúde da Família a que estão vinculadas o planejamento, a execução, o
+                monitoramento e a avaliação das ações de saúde;</p>
+            <p>II - ampliar a resolutividade da Atenção Primária à Saúde (APS) em termos clínicos e sanitários;</p>
+            <p>III - contribuir para a integralidade do cuidado do indivíduo e da família, tanto por intermédio da
+                ampliação da clínica, como do aumento da capacidade de análise e intervenção sobre as necessidades
+                de saúde, incluindo ações de promoção à saúde, prevenção de agravos e vigilância em saúde;</p>
+            <p>IV - compartilhar saberes e práticas em saúde favorecendo ações de educação permanente e de gestão de
+                grupos específicos nas áreas de abrangência das equipes vinculadas;</p>
+            <p>V - desenvolver ações de cuidado centrado na pessoa com foco na família e orientado para a
+                comunidade, em conjunto com cada equipe de Saúde da Família;</p>
+            <p>VI - ser corresponsável pelo cuidado em saúde em todas as fases do desenvolvimento humano,
+                considerando a realidade epidemiológica, cultural e socioeconômica da população do território
+                adstrito;</p>
+        </div>
+    </div>
+
+    <div class="mySlides fade" style="display: none;">
+        <div style="margin:50px 40px;">
+            <p>V - desenvolver ações de cuidado centrado na pessoa com foco na família e orientado para a
+                comunidade, em conjunto com cada equipe de Saúde da Família;</p>
+            <p>VI - ser corresponsável pelo cuidado em saúde em todas as fases do desenvolvimento humano,
+                considerando a realidade epidemiológica, cultural e socioeconômica da população do território
+                adstrito;</p>
+            <p>VII - registrar, monitorar e avaliar as demandas recebidas pelas equipes de Saúde da Família;</p>
+            <p>VIII - identificar as demandas mais frequentes das equipes de Saúde da Família, construindo ações de
+                intervenção, em parceria com as equipes, para qualificar a produção do cuidado;</p>
+            <p>IX - analisar, junto com as equipes de Saúde de Família, as principais causas de encaminhamento para
+                outros níveis de atenção, com ações de qualificação do cuidado para ampliação da resolutividade na
+                APS;</p>
+            <p>X - acompanhar e contribuir na implementação dos planos de cuidado elaborados em conjunto com demais
+                níveis de atenção;</p>
+            <p>XI - trabalhar, juntamente com as equipes de Saúde da Família, na identificação de casos de violência
+                e seus fatores de riscos, com notificação quando indicado;</p>
+        </div>
+    </div>
+
+    <div class="mySlides fade" style="display: none;">
+        <div style="margin:69px 35px;">
+            <p>XII - realizar atenção à saúde no território, no domicílio e na Unidade Básica de Saúde;</p>
+            <p>XIV - realizar e participar de reuniões de equipes, a fim de discutir e construir em conjunto o
+                planejamento e a avaliação das ações e do processo de trabalho, casos clínicos e questões
+                administrativas;</p>
+            <p>XV - mapear os dispositivos e atores formais e informais do território e da Rede de Atenção à Saúde
+                (RAS);</p>
+            <p>XVI - desenvolver ações intersetoriais perante outros equipamentos sociais públicos e privados, redes
+                sociais e comunitárias, de forma integrada à RAS;</p>
+            <p>XVII - monitorar e avaliar junto às equipes vinculadas os indicadores de saúde do território
+                elencados pela SES, propondo ações de intervenção que influenciem de forma positiva os resultados
+                alcançados;</p>
+            <p>XVIII - utilizar protocolos, rotinas e normas adotadas pela SES/DF aplicáveis à equipe Nasf-AB e
+                seguir as orientações técnicas da COAPS.</p>
+        </div>
+    </div>
+
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">←</a>
+    <a class="next" onclick="plusSlides(1)">→</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center; margin-top: -38px;">
+    <span class="square-bottom active" onclick="currentSlide(1)"></span>
+    <span class="square-bottom" onclick="currentSlide(2)"></span>
+    <span class="square-bottom" onclick="currentSlide(3)"></span>
+    <span class="square-bottom" onclick="currentSlide(4)"></span>
 </div>
 
-<div class=" coluna-esquerda largura-1_1">
-    <div class="objetivo animate__animated animate__pulse">
-        <div>
-            <div class="destaque-titulo">
-                <p>Boas práticas da unidade 2</p>
-            </div>
-        </div>
-        <div class="box-boas-p-main">
-            <div class="box-bp-col5">
-                <img src="recursos/imgs/RI_27.svg" style="width: 100%;">
-            </div>
-            <div class="box-bp-col7">
-                <p style="width: 90%;">Já passava das 17h quando o enfermeiro Rodrigo acolheu Dona Fernanda, que
-                    queria renovar uma prescrição de psicotrópicos. Rodrigo sabia que Eurípedes, médico da equipe,
-                    estava realizando capacitação com os residentes de medicina de família e comunidade naquele
-                    horário.</p>
-                <p style="width: 90%;">Para evitar a ocupação de uma vaga na agenda no dia seguinte e reduzir a
-                    inquietação de Dona Fernanda, Rodrigo resolveu expor a Eurípedes a situação, que compreendeu de
-                    imediato que valia a pena sair por alguns minutos para renovar a prescrição da paciente, que
-                    estava aflita e insegura se conseguiria resolver seu problema.</p>
-                <p class="seta-right" style="font-size: 20px;">→</p>
-            </div>
-            <div class="box-bp-col5">
-                <img src="recursos/imgs/RI_28a.svg" style="width: 100%;margin-left: 40px;">
-            </div>
-            <div class="box-bp-col7">
-                <p style="width: 90%; margin-left: 40px;">Eurípedes e Rodrigo, numa interconsulta e sem ocupar uma
-                    outra sala, acordaram com Dona Fernanda renovar a prescrição suficiente para 7 dias, quando
-                    teria oportunidade de melhor avaliá-la. Ela havia perdido a prescrição para o fornecimento da
-                    medicação para o mês e teria seu quadro descompensado sem a proatividade de Rodrigo e a parceria
-                    de Eurípedes.</p>
 
-            </div>
-        </div>
-        <div>
-            <p></p>
-        </div>
-    </div>
-</div>
 
-<footer style="padding: 0;">
-    <div class="largura-1_1">
-        <img style="width:100%;  right: 0px;" src="recursos/imgs/RI_13.svg">
-    </div>
-</footer>
+
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let square = document.getElementsByClassName("square-bottom");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < square.length; i++) {
+            square[i].className = square[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        square[slideIndex - 1].className += " active";
+    }
+</script>

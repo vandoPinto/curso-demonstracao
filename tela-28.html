@@ -1,329 +1,106 @@
 <style>
-    /* Tab botões */
-    p {
-        font-size: 11px;
-    }
-
-    .tab {
-        float: left;
-        width: 30%;
-        height: 300px;
-        margin-left: 20px;
-    }
-
-
-    .tab button {
+    .col-4 {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        color: #fff;
-        background-color: #167A56;
-        ;
-        font-weight: 600;
-        padding: 10px 15px;
-        margin-bottom: 6.2px;
+        width: 94%;
+        margin-left: 25px;
+    }
+
+    .col-4>div {
+        margin: 0 10px;
+    }
+
+    /* Cards */
+
+    .scene {
+        display: inline-block;
+    }
+
+    .card {
+        position: relative;
         width: 100%;
-        border: none;
-        outline: none;
-        text-align: left;
-        cursor: pointer;
-        transition: 0.3s;
-        font-size: 0.8rem;
+        height: 100%;
+        cursor: pointer !important;
+        transform-style: preserve-3d;
+        transform-origin: center right;
+        transition: transform 1s;
     }
 
-    /* Tab Body */
+    .card.flip {
+        transform: translateX(-100%) rotateY(-180deg);
+    }
 
-    .tabcontent {
-        float: left;
-        background-color: #344ca4 !important;
+    .card-face {
+        position: absolute;
+        text-align: center;
+        backface-visibility: hidden;
+    }
+
+
+
+    .card-face-back {
+        display: flex;
+        align-items: center;
+        width: 170px;
+        height: 250px;
+        padding: 10px;
         color: #fff;
-        padding: 20px 50px;
-        border: none;
-        width: 55%;
-        border-left: none;
-        height: 280px;
-        overflow-y: scroll;
+        background-color: #167a56;
+        transform: rotateY(180deg);
     }
 
-    .tab button:focus {
-        background-color: #344ca4;
-        margin-right: -5px;
-    }
-
-    .tab>button.active {
-        background-color: #344ca4;
-    }
-
-    .tab img {
-        width: 8%;
-    }
-
-    .tabcontent::-webkit-scrollbar {
-        width: 10px;
-    }
-
-    .tabcontent::-webkit-scrollbar-track {
-        background: #167A56;
-    }
-
-    .tabcontent::-webkit-scrollbar-thumb {
-        background-color: #FFCC00;
+    
+    p {
+        font-size: 14px;
     }
 </style>
 
-<div class="largura-1_1">
-    <img style="width:100%; right: 0px;" src="recursos/imgs/RI_05.svg">
+<div style="display: flex;justify-content: space-between;align-items: center;padding: 30px;">
+    <h1>Recursos educacionais: Flash card </h1>
 </div>
 
-<div style="margin: 15px 70px;">
-    <p>
-        Em relação às atribuições específicas dos profissionais das equipes que atuam na Atenção Básica, a PNAB
-        (2017)
-        elenca as seguintes atribuições, <strong>clique</strong> em cada uma das abas para conhecê-las.
-    </p>
-</div>
 
-<div class="tab">
-    <button class="tablinks bg-btn5 active" onclick="openTab(event, 'enfermeiro')" id="defaultOpen">Enfermeiro<img
-            src="recursos/imgs/RIC_15.svg"></button>
-    <button class="tablinks bg-btn1" onclick="openTab(event, 'enfermagem')">Técnico e/ou Auxiliar de Enfermagem <img
-            src="recursos/imgs/RIC_15.svg"></button>
-    <button class="tablinks bg-btn2" onclick="openTab(event, 'medico')">Médico<img
-            src="recursos/imgs/RIC_15.svg"></button>
-    <button class="tablinks bg-btn3" onclick="openTab(event, 'cirurgiao')">Cirurgião-Dentista<img
-            src="recursos/imgs/RIC_15.svg"></button>
-    <button class="tablinks bg-btn4" onclick="openTab(event, 'tecnico')">Técnico em Saúde Bucal (TSB):<img
-            src="recursos/imgs/RIC_15.svg"></button>
-    <button class="tablinks bg-btn4" onclick="openTab(event, 'auxiliar')">Auxiliar em Saúde Bucal (ASB)<img
-            src="recursos/imgs/RIC_15.svg"></button>
-    <button class="tablinks bg-btn4" onclick="openTab(event, 'atribuicao')">Atribuições do ACS<img
-            src="recursos/imgs/RIC_15.svg"></button>
-</div>
 
-<div id="enfermeiro" class="tabcontent" style="display: block;">
-    <p>I - Realizar atenção à saúde aos indivíduos e famílias vinculadas às equipes e, quando indicado ou
-        necessário, no
-        domicílio e/ou nos demais espaços comunitários (escolas, associações entre outras), em todos os ciclos de
-        vida;
-    </p>
-    <p>II - Realizar consulta de enfermagem, procedimentos, solicitar exames complementares, prescrever medicações
-        conforme protocolos, diretrizes clínicas e terapêuticas, ou outras normativas técnicas estabelecidas pelo
-        gestor
-        federal, estadual, municipal ou do Distrito Federal, observadas as disposições legais da profissão;</p>
-    <p>III - Realizar e/ou supervisionar acolhimento com escuta qualificada e classificação de risco, de acordo com
-        protocolos estabelecidos;</p>
-    <p>IV - Realizar estratificação de risco e elaborar plano de cuidados para as pessoas que possuem condições
-        crônicas
-        no território, junto aos demais membros da equipe;</p>
-    <p>V - Realizar atividades em grupo e encaminhar, quando necessário, usuários a outros serviços, conforme fluxo
-        estabelecido pela rede local;</p>
-    <p>VI - Planejar, gerenciar e avaliar as ações desenvolvidas pelos técnicos/auxiliares de enfermagem, ACS e ACE
-        em
-        conjunto com os outros membros da equipe;</p>
-    <p>VII - Supervisionar as ações do técnico/auxiliar de enfermagem e ACS;</p>
-    <p>VIII - Implementar e manter atualizados rotinas, protocolos e fluxos relacionados a sua área de competência
-        na
-        UBS; e</p>
-    <p>IX - Exercer outras atribuições conforme legislação profissional, e que sejam de responsabilidade na sua área
-        de
-        atuação. (BRASIL, 2017).</p>
-</div>
-
-<div id="enfermagem" class="tabcontent" style="display: none;">
-    <p>I - Participar das atividades de atenção à saúde realizando procedimentos regulamentados no exercício de sua
-        profissão na UBS e, quando indicado ou necessário, no domicílio e/ou nos demais espaços comunitários
-        (escolas,
-        associações, entre outros);</p>
-    <p>II - Realizar procedimentos de enfermagem, como curativos, administração de medicamentos, vacinas, coleta de
-        material para exames, lavagem, preparação e esterilização de materiais, entre outras atividades delegadas
-        pelo
-        enfermeiro, de acordo com sua área de atuação e regulamentação; e</p>
-    <p>III - Exercer outras atribuições que sejam de responsabilidade na sua área de atuação</p>
-</div>
-
-<div id="medico" class="tabcontent" style="display: none;">
-    <p>I - Realizar a atenção à saúde às pessoas e famílias sob sua responsabilidade;</p>
-    <p>II - Realizar consultas clínicas, pequenos procedimentos cirúrgicos, atividades em grupo na UBS e, quando
-        indicado ou necessário, no domicílio e/ou nos demais espaços comunitários (escolas, associações entre
-        outros);
-        em conformidade com protocolos, diretrizes clínicas e terapêuticas, bem como outras normativas técnicas
-        estabelecidas pelos gestores (federal, estadual, municipal ou Distrito Federal), observadas as disposições
-        legais da profissão;</p>
-    <p>III - Realizar estratificação de risco e elaborar plano de cuidados para as pessoas que possuem condições
-        crônicas no território, junto aos demais membros da equipe;</p>
-    <p>IV - Encaminhar, quando necessário, usuários a outros pontos de atenção, respeitando fluxos locais, mantendo
-        sob
-        sua responsabilidade o acompanhamento do plano terapêutico prescrito;</p>
-    <p>V - Indicar a necessidade de internação hospitalar ou domiciliar, mantendo a responsabilização pelo
-        acompanhamento da pessoa;</p>
-    <p>VI - Planejar, gerenciar e avaliar as ações desenvolvidas pelos ACS e ACE em conjunto com os outros membros
-        da
-        equipe; e</p>
-    <p>VII - Exercer outras atribuições que sejam de responsabilidade na sua área de atuação.</p>
-</div>
-
-<div id="cirurgiao" class="tabcontent" style="display: none;">
-    <p>I - Realizar a atenção em saúde bucal (promoção e proteção da saúde, prevenção de agravos, diagnóstico,
-        tratamento, acompanhamento, reabilitação e manutenção da saúde) individual e coletiva a todas as famílias, a
-        indivíduos e a grupos específicos, atividades em grupo na UBS e, quando indicado ou necessário, no domicílio
-        e/ou nos demais espaços comunitários (escolas, associações entre outros), de acordo com planejamento da
-        equipe,
-        com resolubilidade e em conformidade com protocolos, diretrizes clínicas e terapêuticas, bem como outras
-        normativas técnicas estabelecidas pelo gestor federal, estadual, municipal ou do Distrito Federal,
-        observadas as
-        disposições legais da profissão;</p>
-    <p>II - Realizar diagnóstico com a finalidade de obter o perfil epidemiológico para o planejamento e a
-        programação
-        em saúde bucal no território;</p>
-    <p>III - Realizar os procedimentos clínicos e cirúrgicos da AB em saúde bucal, incluindo atendimento das
-        urgências,
-        pequenas cirurgias ambulatoriais e procedimentos relacionados com as fases clínicas de moldagem, adaptação e
-        acompanhamento de próteses dentárias (elementar, total e parcial removível);</p>
-    <p>IV - Coordenar e participar de ações coletivas voltadas à promoção da saúde e à prevenção de doenças bucais;
-    </p>
-    <p>V - Acompanhar, apoiar e desenvolver atividades referentes à saúde com os demais membros da equipe, buscando
-        aproximar saúde bucal e integrar ações de forma multidisciplinar;</p>
-    <p>VI - Realizar supervisão do técnico em saúde bucal (TSB) e auxiliar em saúde bucal (ASB);</p>
-    <p>VII - Planejar, gerenciar e avaliar as ações desenvolvidas pelos ACS e ACE em conjunto com os outros membros
-        da
-        equipe;</p>
-    <p>VIII - Realizar estratificação de risco e elaborar plano de cuidados para as pessoas que possuem condições
-        crônicas no território, junto aos demais membros da equipe; e</p>
-    <p>IX - Exercer outras atribuições que sejam de responsabilidade na sua área de atuação. (BRASIL, 2017). </p>
-</div>
-
-<div id="tecnico" class="tabcontent" style="display: none;">
-    <p>I - Realizar a atenção em saúde bucal individual e coletiva das famílias, indivíduos e a grupos específicos,
-        atividades em grupo na UBS e, quando indicado ou necessário, no domicílio e/ou nos demais espaços
-        comunitários
-        (escolas, associações entre outros), segundo programação e de acordo com suas competências técnicas e
-        legais;
-    </p>
-    <p>II - Coordenar a manutenção e a conservação dos equipamentos odontológicos;</p>
-    <p>III - Acompanhar, apoiar e desenvolver atividades referentes à saúde bucal com os demais membros da equipe,
-        buscando aproximar e integrar ações de saúde de forma multidisciplinar;</p>
-    <p>IV - Apoiar as atividades dos ASB e dos ACS nas ações de prevenção e promoção da saúde bucal;</p>
-    <p>V - Participar do treinamento e capacitação de auxiliar em saúde bucal e de agentes multiplicadores das ações
-        de
-        promoção à saúde;</p>
-    <p>VI - Participar das ações educativas atuando na promoção da saúde e na prevenção das doenças bucais;</p>
-    <p>VII - Participar da realização de levantamentos e estudos epidemiológicos, exceto na categoria de examinador;
-    </p>
-    <p>VIII - Realizar o acolhimento do paciente nos serviços de saúde bucal;</p>
-    <p>IX - Fazer remoção do biofilme, de acordo com a indicação técnica definida pelo cirurgião-dentista;</p>
-    <p>X - Realizar fotografias e tomadas de uso odontológico exclusivamente em consultórios ou clínicas
-        odontológicas;
-    </p>
-    <p>XI - Inserir e distribuir no preparo cavitário materiais odontológicos na restauração dentária direta, sendo
-        vedado o uso de materiais e instrumentos não indicados pelo cirurgião-dentista;</p>
-    <p>XII - Auxiliar e instrumentar o cirurgião-dentista nas intervenções clínicas e procedimentos demandados pelo
-        mesmo;</p>
-    <p>XIII - Realizar a remoção de sutura conforme indicação do Cirurgião Dentista;</p>
-    <p>XIV - Executar a organização, limpeza, assepsia, desinfecção e esterilização do instrumental, dos
-        equipamentos
-        odontológicos e do ambiente de trabalho;</p>
-    <p>XV - Proceder à limpeza e à antissepsia do campo operatório, antes e após atos cirúrgicos;</p>
-    <p>XVI - Aplicar medidas de biossegurança no armazenamento, manuseio e descarte de produtos e resíduos
-        odontológicos;</p>
-    <p>XVII - Processar filme radiográfico;</p>
-    <p>XVIII - Selecionar moldeiras;</p>
-    <p>XIX - Preparar modelos em gesso;</p>
-    <p>XX - Manipular materiais de uso odontológico.</p>
-    <p>XXI - Exercer outras atribuições que sejam de responsabilidade na sua área de atuação.</p>
-</div>
-<div id="auxiliar" class="tabcontent" style="display: none;">
-    <p>I - Realizar ações de promoção e prevenção em saúde bucal para as famílias, grupos e indivíduos, mediante
-        planejamento local e protocolos de atenção à saúde;</p>
-    <p>II - Executar organização, limpeza, assepsia, desinfecção e esterilização do instrumental, dos equipamentos
-        odontológicos e do ambiente de trabalho;</p>
-    <p>III - Auxiliar e instrumentar os profissionais nas intervenções clínicas,</p>
-    <p>IV - Realizar o acolhimento do paciente nos serviços de saúde bucal;</p>
-    <p>V - Acompanhar, apoiar e desenvolver atividades referentes à saúde bucal com os demais membros da equipe de
-        Atenção Básica, buscando aproximar e integrar ações de saúde de forma multidisciplinar;</p>
-    <p>VI - Aplicar medidas de biossegurança no armazenamento, transporte, manuseio e descarte de produtos e
-        resíduos
-        odontológicos;</p>
-    <p>VII - Processar filme radiográfico;</p>
-    <p>VIII - Selecionar moldeiras;</p>
-    <p>IX - Preparar modelos em gesso;</p>
-    <p>X - Manipular materiais de uso odontológico realizando manutenção e conservação dos equipamentos;</p>
-    <p>XI - Participar da realização de levantamentos e estudos epidemiológicos, exceto na categoria de examinador;
-        e
-    </p>
-    <p>XII - Exercer outras atribuições que sejam de responsabilidade na sua área de atuação. (BRASIL, 2017).</p>
-</div>
-<div id="atribuicao" class="tabcontent" style="display: none;">
-    <p>I - Trabalhar com adscrição de indivíduos e famílias em base geográfica definida e cadastrar todas as pessoas
-        de
-        sua área, mantendo os dados atualizados no sistema de informação da Atenção Básica vigente, utilizando-os de
-        forma sistemática, com apoio da equipe, para a análise da situação de saúde, considerando as características
-        sociais, econômicas, culturais, demográficas e epidemiológicas do território, e priorizando as situações a
-        serem
-        acompanhadas no planejamento local;</p>
-    <p>II - Utilizar instrumentos para a coleta de informações que apoiem no diagnóstico demográfico e sociocultural
-        da
-        comunidade;</p>
-    <p>III - Registrar, para fins de planejamento e acompanhamento das ações de saúde, os dados de nascimentos,
-        óbitos,
-        doenças e outros agravos à saúde, garantido o sigilo ético;</p>
-    <p>IV - Desenvolver ações que busquem a integração entre a equipe de saúde e a população adscrita à UBS,
-        considerando as características e as finalidades do trabalho de acompanhamento de indivíduos e grupos
-        sociais ou
-        coletividades;</p>
-    <p>V - Informar os usuários sobre as datas e horários de consultas e exames agendados;</p>
-    <p>VI - Participar dos processos de regulação a partir da Atenção Básica para acompanhamento das necessidades
-        dos
-        usuários no que diz respeito a agendamentos ou desistências de consultas e exames solicitados;</p>
-    <p>VII - Exercer outras atribuições que lhes sejam atribuídas por legislação específica da categoria, ou outra
-        normativa instituída pelo gestor federal, municipal ou do Distrito Federal.</p>
-    <p>Poderão ser consideradas, ainda, atividades do Agente Comunitário de Saúde, a serem realizadas em caráter
-        excepcional, assistidas por profissional de saúde de nível superior, membro da equipe, após treinamento
-        específico e fornecimento de equipamentos adequados, em sua base geográfica de atuação, encaminhando o
-        paciente
-        para a unidade de saúde de referência.</p>
-    <p>I - aferir a pressão arterial, inclusive no domicílio, com o objetivo de promover saúde e prevenir doenças e
-        agravos;</p>
-    <p>II - realizar a medição da glicemia capilar, inclusive no domicílio, para o acompanhamento dos casos
-        diagnosticados de diabetes mellitus e segundo projeto terapêutico prescrito pelas equipes que atuam na
-        Atenção
-        Básica;</p>
-    <p>III - aferição da temperatura axilar, durante a visita domiciliar;</p>
-    <p>IV - realizar técnicas limpas de curativo, que são realizadas com material limpo, água corrente ou soro
-        fisiológico e cobertura estéril, com uso de coberturas passivas, que somente cobre a ferida; e</p>
-    <p>V - Indicar a necessidade de internação hospitalar ou domiciliar, mantendo a responsabilização pelo
-        acompanhamento da pessoa;</p>
-    <p>VI - Planejar, gerenciar e avaliar as ações desenvolvidas pelos ACS e ACE em conjunto com os outros membros
-        da
-        equipe; e</p>
-    <p>VII - Exercer outras atribuições que sejam de responsabilidade na sua área de atuação. (BRASIL, 2017).</p>
-</div>
-
-<footer style="padding: 0;">
-    <div class="largura-1_1">
-        <img style="width:100%;  right: 0px;" src="recursos/imgs/RI_26.svg">
+<div class="coluna esquerda largura-1_1 scene scene--card animate__animated animate__backInLeft">
+    <div class="col-4">
+        <div class="card">
+            <div class="card-face"><img src="recursos/imgs/RI_02.svg"></div>
+            <div class="card-face card-face-back">Realizar o cuidado integral à saúde da população adscrita,
+                prioritariamente no âmbito da Unidade Básica de Saúde, e quando necessário, no domicílio e demais
+                espaços comunitários (escolas, associações, entre outros), com atenção especial às populações que
+                apresentem necessidades específicas (em situação de rua, em medida socioeducativa, privada de
+                liberdade, ribeirinha, fluvial, etc.).</div>
+        </div>
+        <div class="card">
+            <div class="card-face"><img src="recursos/imgs/RI_03.svg"></div>
+            <div class="card-face card-face-back">Participar do processo de territorialização e mapeamento da área
+                de atuação da equipe, identificando grupos, famílias e indivíduos expostos a riscos e
+                vulnerabilidades;</div>
+        </div>
+        <div class="card">
+            <div class="card-face"><img src="recursos/imgs/RI_10.svg"></div>
+            <div class="card-face card-face-back">Cadastrar e manter atualizado o cadastramento e outros dados de
+                saúde das famílias e dos indivíduos no sistema de informação da Atenção Básica vigente, utilizando
+                as informações sistematicamente para a análise da situação de saúde, considerando as características
+                sociais, econômicas, culturais, demográficas e epidemiológicas do território, priorizando as
+                situações a serem acompanhadas no planejamento local;</div>
+        </div>
+        <div class="card">
+            <div class="card-face"> <img src="recursos/imgs/RI_09.svg"></div>
+            <div class="card-face card-face-back">Realizar ações de atenção à saúde conforme a necessidade de saúde
+                da população local, bem como aquelas previstas nas prioridades, protocolos, diretrizes clínicas e
+                terapêuticas, assim como, na oferta nacional de ações e serviços essenciais e ampliados da AB; [...]
+                (BRASIL, 2017)</div>
+        </div>
     </div>
-</footer>
+</div>
+
 
 <script>
-    function openTab(evt, tabName) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-        document.getElementById(tabName).style.display = "block";
-        evt.currentTarget.className += " active";
-    }
-    for (let tab of document.querySelectorAll('.tabcontent')) {
-        tab.onscroll = function (e) {
-            var topOfDiv = Math.max(e.target.scrollTop - 2, 0);
-            e.target.querySelector('div').style.top = topOfDiv + 'px';
-        }
-    }
+    var cards = document.querySelectorAll('.card');
 
-    document.getElementById("defaultOpen").click();
+    [...cards].forEach(card => {
+        card.addEventListener('click', function () {
+            card.classList.toggle('flip');
+        });
+    });
 </script>

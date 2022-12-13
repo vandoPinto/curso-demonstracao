@@ -1,62 +1,111 @@
 <style>
-    ul>li {
-        list-style-type: disc;
-        margin-left: 20px;
-        margin-bottom: 5px;
+    .destaque-titulo {
+        width: 34%;
+        position: absolute;
+        top: 5%;
+        left: 9%;
+        background-color: #FFCC00;
+        text-transform: uppercase;
+        font-weight: 900;
+        color: #344CA4;
+        padding: 2px 15px;
     }
 
-    h1 {
-        font-size: 18px;
-        font-weight: 900;
-        text-transform: uppercase;
-        color: #344CA4;
+    .box-boas-p-main::-webkit-scrollbar-thumb {
+        background-color: #FFCC00;
     }
+
+    .box-bp-col5 {
+        width: 35%;
+    }
+
+    .box-bp-col7 {
+        width: 65%;
+    }
+
+    .box-boas-p-main {
+        overflow-x: scroll;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: #344CA4;
+        width: 75%;
+        height: 210px;
+        margin: auto;
+        padding: 20px;
+        padding-top: 50px;
+        color: #fff;
+        gap: 30px;
+    }
+
     p {
-    font-size: 11px;
-}
+        font-size: 11px;
+    }
+
+    .destaque-titulo p {
+        margin: 0;
+        font-size: 19px;
+    }
+
+    /* _________ */
+
+    .seta-right {
+        color: #fff;
+        float: right;
+        margin: 0;
+        margin-right: 40px;
+    }
+
+    p {
+        font-size: 11px;
+    }
 </style>
 
-<div class="largura-1_1">
-    <img style="width:100%; right: 0px;" src="recursos/imgs/RI_05.svg">
+
+<div style="display: flex;justify-content: space-between;align-items: center;padding: 30px;">
+    <h1 style="font-size: 24px;">Recursos educacionais: Histórias em quadrinhos</h1>
 </div>
 
-<div class="coluna-esquerda largura-2_3 ">
-    <div style="margin: 63px auto; width: 75%;">
-        <h1>Pontos de atenção secundária de uma rede de atenção em saúde</h1>
-        <p>
-            Tendo em mente o que são as Redes de Atenção à Saúde, agora vamos estudar os pontos de Atenção
-            Secundária e
-            terciária de uma Rede de Atenção em Saúde.
-        </p>
-        <p>
-            Os pontos de atenção primária, secundária e terciária se diferenciam por suas respectivas densidades
-            tecnológicas, sendo os pontos de atenção terciária mais densos tecnologicamente que os pontos de atenção
-            secundária, por essa razão tendem a ser mais concentrados espacialmente. Contudo, na perspectiva das
-            redes
-            poliárquicas, não há entre eles relações de subordinação, já que todos são igualmente importantes para
-            se
-            atingirem os objetivos comuns das RASs.
-        </p>
-        <p>
-            Na organização dos pontos de atenção secundária, devem ser elaborados os protocolos clínicos que
-            normalizam,
-            em detalhes, toda a carteira de serviços ofertada. Assim, ficam claros os papéis das equipes de APS em
-            relação a cada condição de saúde e as situações em que as pessoas usuárias devem ser encaminhadas ao
-            ponto
-            de atenção secundária de uma RAS para uma interconsulta e sua devolução para a APS.
-        </p>
+
+
+<div class=" coluna-esquerda largura-1_1">
+    <div class="objetivo animate__animated animate__pulse">
+        <div>
+            <div class="destaque-titulo">
+                <p>Boas práticas da unidade 2</p>
+            </div>
+        </div>
+        <div class="box-boas-p-main">
+            <div class="box-bp-col5">
+                <img src="recursos/imgs/RI_27.svg" style="width: 100%;">
+            </div>
+            <div class="box-bp-col7">
+                <p style="width: 90%;">Já passava das 17h quando o enfermeiro Rodrigo acolheu Dona Fernanda, que
+                    queria renovar uma prescrição de psicotrópicos. Rodrigo sabia que Eurípedes, médico da equipe,
+                    estava realizando capacitação com os residentes de medicina de família e comunidade naquele
+                    horário.</p>
+                <p style="width: 90%;">Para evitar a ocupação de uma vaga na agenda no dia seguinte e reduzir a
+                    inquietação de Dona Fernanda, Rodrigo resolveu expor a Eurípedes a situação, que compreendeu de
+                    imediato que valia a pena sair por alguns minutos para renovar a prescrição da paciente, que
+                    estava aflita e insegura se conseguiria resolver seu problema.</p>
+                <p class="seta-right" style="font-size: 20px;">→</p>
+            </div>
+            <div class="box-bp-col5">
+                <img src="recursos/imgs/RI_28a.svg" style="width: 100%;margin-left: 40px;">
+            </div>
+            <div class="box-bp-col7">
+                <p style="width: 90%; margin-left: 40px;">Eurípedes e Rodrigo, numa interconsulta e sem ocupar uma
+                    outra sala, acordaram com Dona Fernanda renovar a prescrição suficiente para 7 dias, quando
+                    teria oportunidade de melhor avaliá-la. Ela havia perdido a prescrição para o fornecimento da
+                    medicação para o mês e teria seu quadro descompensado sem a proatividade de Rodrigo e a parceria
+                    de Eurípedes.</p>
+
+            </div>
+        </div>
+        <div>
+            <p></p>
+        </div>
     </div>
 </div>
 
-<div class="coluna-direita largura-1_3 ">
-    <div style="margin: 0 auto; width: 80%;">
-        <a href="recursos/documentos/RD_01.pdf" target="_blank"><img src="recursos/imgs/RI_01.svg"
-                style="width:100%"></a>
-    </div>
-</div>
-
-<footer style="padding: 0;">
-    <div class="largura-1_1">
-        <img style="width:100%;  right: 0px;" src="recursos/imgs/RI_11.svg">
-    </div>
-</footer>

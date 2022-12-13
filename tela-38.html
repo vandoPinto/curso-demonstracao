@@ -1,0 +1,104 @@
+<style type="text/css">
+    .move {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        transition: all 0.2s;
+        transform: scale(1);
+        will-change: transform;
+        user-select: none;
+        cursor: pointer;
+    }
+    
+    .move.active {
+        background: rgba(255, 255, 255, 0.3);
+        cursor: grabbing;
+        cursor: -webkit-grabbing;
+        transform: scale(1);
+    }
+    
+    .move::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+        border-radius: 10px;
+    }
+    
+    .move::-webkit-scrollbar-track {
+        height: 5px;
+        background-color: transparent;
+    }
+    
+    .move::-webkit-scrollbar-thumb {
+        background-color: var(--blue-main);
+        border-radius: 10px;
+    }
+    
+    .fonte-size p {
+        font-size: 11px;
+        color: white;
+    }
+    
+    .fonte-color p{
+        color: white;
+    }
+</style>
+
+<div class="coluna-esquerda largura-1_2 altura-1_1" style="background-color: #FEAC5A;">
+    <div class="fonte-color" style="width:80%; margin: 40px auto; ">
+        <h1 style="text-transform: capitalize; color: white; margin-top: 40px;">Recursos educacionais: Linha do tempo</h1>
+       
+        <p>
+            Arraste a linha do tempo para conhecer os principais precursores e suas contribuições para a epidemiologia.
+        </p>
+     
+    </div>
+</div>
+
+<div class="coluna-direita largura-1_2 move">
+    <img src="recursos/imgs/RM_M1_LinhadoTempo.svg" class="" style="height: 495px;">
+</div>
+
+<!-- <footer class="bg-footer rodape">
+    <div>
+        <p><b>Aula 1</b> Bases históricas, conceitos, objetivos, usos e aplicações da epidemiologia</p>
+    </div>
+    <div>
+        <p><b>Módulo 1</b> INTRODUÇÃO À EPIDEMIOLOGIA</p>
+    </div>
+</footer> -->
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+
+
+        const slider = document.querySelector('.move');
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        slider.addEventListener('mousedown', (e) => {
+            isDown = true;
+            slider.classList.add('active');
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        });
+        slider.addEventListener('mouseleave', () => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+        slider.addEventListener('mouseup', () => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+        slider.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 3; //scroll-fast
+            slider.scrollLeft = scrollLeft - walk;
+            console.log(walk);
+        });
+
+    });
+</script>

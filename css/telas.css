@@ -970,3 +970,378 @@ audio {
 .segundo-10{
     --animate-duration: 10s;
 }
+
+
+/* Modal de apresentação */
+
+.modal-main {
+    background-color: rgba(0, 0, 0, .6) !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.4s;
+    z-index: 1;
+}
+
+.modal-box {
+    width: 560px;
+    margin: 168px auto;
+    padding: 20px;
+}
+
+.modal-orange {
+    background-color: var(--orange2);
+}
+
+.modal-orange3 {
+    background-color: var(--orange3);
+}
+
+.modal-orange4 {
+    background-color: var(--orange4);
+}
+
+.modal-blue1 {
+    background-color: var(--blue1);
+}
+
+.modal-blue2 {
+    background-color: var(--blue2);
+}
+
+.modal-blue3 {
+    background-color: var(--blue3);
+}
+
+.modal-blue6 {
+    background-color: var(--blue6);
+}
+
+.modal-blue7 {
+    background-color: var(--blue7);
+}
+
+.modal-blue9 {
+    background-color: var(--blue9);
+}
+
+.modal-blue12 {
+    background-color: var(--blue12);
+}
+
+.modal-green {
+    background-color: var(--green);
+}
+
+.modal-green3 {
+    background-color: var(--green3);
+}
+
+.modal-purple2 {
+    background-color: var(--purple2);
+}
+
+.modal-grey {
+    background-color: var(--grey);
+}
+
+.modal-blue-main {
+    background-color: var(--blue-main);
+}
+
+
+
+
+
+.modal-fechar-x {
+    text-align: right;
+}
+
+.btn-fechar-apre {
+    border: none;
+    padding: 3px 5px;
+    border-radius: 3px;
+    background-color: var(--blue-main);
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .3s;
+}
+
+.btn-fechar-apre:hover {
+    background-color: var(--blue1);
+}
+
+
+/* Computadores - Modal */
+
+.btn-pc {
+    width: 100%;
+    padding: 0px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+/* 7 erros - Modal */
+
+.btn-7erros {
+    width: 85%;
+    padding: 0px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+/* Modal dos botões Sim e Não e Livros */
+
+.modal-main {
+    background-color: rgba(0, 0, 0, .6) !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.modal-sim {
+    width: 560px;
+    background: linear-gradient( 180deg, var(--color-orange2), var(--color-orange3));
+    margin: 142px auto;
+    padding: 20px;
+}
+
+.modal-sim p {
+    color: #000;
+}
+
+.modal-fechar-x {
+    text-align: right;
+}
+
+.btn-fechar {
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: var(--color-blue1);
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .3s;
+}
+
+.btn-fechar:hover {
+    background-color: var(--color-blue3);
+}
+
+
+/* Modal dos livros conselho */
+
+.modal-main-books {
+    position: relative;
+    top: 0;
+    left: -41px;
+    right: 10px;
+    width: 100%;
+    margin-right: 100px;
+    display: none;
+    opacity: 0;
+    transition: opacity 3s;
+}
+
+.modal-conselho {
+    width: 502px;
+    background: linear-gradient( 180deg, var(--color-orange2), var(--color-orange3));
+    margin: 0px auto;
+    margin-bottom: 5px;
+    padding: 10px 15px;
+}
+
+.modal-conselho p {
+    color: #000;
+}
+
+.modal-body {
+    padding: 0;
+}
+
+.btn-fechar-books {
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: var(--color-blue1);
+    text-transform: uppercase;
+    font-size: 0.6rem;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .3s;
+}
+
+.btn-fechar:hover {
+    background-color: var(--color-blue3);
+}
+
+
+/* Modal 7 erros */
+
+.modal-main-7erros {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 39%;
+    display: none;
+    opacity: 0;
+    transition: opacity 3s;
+}
+
+.modal-main-7erros p {
+    color: #000;
+}
+
+.modal-1 {
+    width: 390px;
+    background: linear-gradient( 180deg, var(--color-orange2), var(--color-orange3));
+    margin-top: 39%;
+    margin-left: 5%;
+    padding: 10px 15px;
+}
+
+.modal-2 {
+    width: 390px;
+    background: linear-gradient( 180deg, var(--color-orange2), var(--color-orange3));
+    margin-top: 61%;
+    margin-left: 5%;
+    padding: 10px 15px;
+}
+
+.modal-3 {
+    width: 390px;
+    background: linear-gradient( 180deg, var(--color-orange2), var(--color-orange3));
+    margin-top: 84%;
+    margin-left: 5%;
+    padding: 10px 15px;
+}
+
+.modal-4 {
+    width: 390px;
+    background: linear-gradient( 180deg, var(--color-orange2), var(--color-orange3));
+    margin-top: 39%;
+    margin-left: 130%;
+    padding: 10px 15px;
+}
+
+.modal-5 {
+    width: 390px;
+    background: linear-gradient( 180deg, var(--color-orange2), var(--color-orange3));
+    margin-top: 111%;
+    margin-left: 5%;
+    padding: 10px 15px;
+}
+
+.modal-6 {
+    width: 390px;
+    background: linear-gradient( 180deg, var(--color-orange2), var(--color-orange3));
+    margin-top: 98%;
+    margin-left: 130%;
+    padding: 10px 15px;
+}
+
+.modal-7 {
+    width: 390px;
+    background: linear-gradient( 180deg, var(--color-orange2), var(--color-orange3));
+    margin-top: 72%;
+    margin-left: 130%;
+    padding: 10px 15px;
+}
+
+.modal-body {
+    padding: 0;
+}
+
+.modal-fechar-7erros {
+    text-align: right;
+    position: relative;
+    margin-bottom: -15px;
+}
+
+.btn-fechar-7erros {
+    color: #fff;
+    border: none;
+    padding: 2px 5px;
+    background-color: transparent;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .3s;
+}
+
+.btn-fechar-7erros:hover {
+    background-color: var(--color-blue3);
+}
+
+
+/* Modal - Livro Dicas */
+
+.modal-tip {
+    width: 445px;
+    background: linear-gradient( 180deg, var(--color-orange2), var(--color-orange3));
+    margin: 0 auto;
+    padding: 10px 15px;
+}
+
+.modal-tip p,
+ul,
+li {
+    color: #000;
+}
+
+
+/* Boxes em geral*/
+
+.box-click {
+    width: 460px;
+    background: linear-gradient( 180deg, var(--color-orange2), var(--color-orange3));
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.box-click p {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #000;
+}
+
+
+.box-icone {
+    display: flex;
+    width: 460px;
+    background: linear-gradient( 180deg, var(--color-orange2), var(--color-orange3));
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.box-icone p {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #000;
+}

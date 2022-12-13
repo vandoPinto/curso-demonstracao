@@ -66,7 +66,7 @@ function carregarTela(numeroTela) {
     }
 
     telaAtual = parseInt(numeroTela);
-
+    console.log(telaAtual);
     if (telaAtual > totalTelas) telaAtual = totalTelas;
     if (telaAtual < 1) telaAtual = 1;
 

@@ -1,15 +1,15 @@
 <style>
     iframe {
-        width: 240px;
-        height: 130px;
+        height: 225px;
     }
-
-    .centralizar {
+    .iframes{
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
+        width: 100%;
+        padding: 5px;
     }
+
 </style>
 <div style="padding: 40px;">
     <div style="display: flex;align-items: center;justify-content: space-between;">
@@ -17,19 +17,19 @@
         <img src="recursos/imgs/bolinhas.svg" style="width: 70px;">
     </div>
     <div
-        style="display: flex;margin-top: 90px;margin-left: 90px;width: 570px;align-items: center;justify-content: space-between;">
-        <div class="centralizar">
-            <video src="recursos/video/vinheta-estrategia-saude.mov" controls="true" style="width: 280px;"></video>
-            <p style="width: 180px;text-align: center;justify-content: center;">Vinheta pra o Curso Estratégia Saúde
-                da Família</p>
+        style="display: flex;width: 100%;align-items: center;justify-content: space-around;">
+        <div class="iframes">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/QODNTNh4flo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p style="width: 200px;">Vinheta para o Curso Saúde Prisional: principais doenças e agravos</p>
         </div>
-        <div class="centralizar">
-            <iframe src="https://www.youtube.com/embed/nABDC5030eo"
-                title="Vinheta pra o Curso Políticas Informadas por Evidências em AF" frameborder="0"
+        <div class="iframes">
+            <iframe src="https://www.youtube.com/embed/H7XaUolBc5A"
+                title="Vinheta para o Programa de Qualificação da Atenção Primária à Saúde do Distrito Federal"
+                frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen=""></iframe>
-            <p style="width: 210px; text-align: center;">Vinheta pra o Curso Políticas Informadas por Evidências em
-                AF</p>
+            <p style="width: 210px;">Vinheta para o Programa de Qualificação da Atenção Primária à Saúde do Distrito
+                Federal</p>
         </div>
     </div>
 </div>

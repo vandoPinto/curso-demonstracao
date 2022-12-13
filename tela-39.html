@@ -1,0 +1,426 @@
+<style>
+    h2{
+        margin-top: 0;
+    }
+
+    .grid-img {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        align-items: baseline;
+        cursor: pointer;
+        width: 80%;
+        gap: 0 10px;
+        padding: 0px;
+        margin: 0 auto;
+    }
+
+    .grid-img p{
+        width: 80%;
+        margin: auto;
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .grid-img img{
+        width:100%;
+    }
+
+    .modal-inside{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .modal-inside p{
+        color:#454D77;
+    }
+    .btn-fechar-apre {
+    border: none;
+    padding: 3px 5px;
+    border-radius: 3px;
+    background-color: #2F5579;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+</style>
+
+
+<div style="display: flex;justify-content: space-between;align-items: center;padding: 30px;">
+    <h1 style="font-size: 24px;">Recursos educacionais: Modal</h1>
+</div>
+
+
+<div class="coluna-esquerda largura-1_1">
+    <div class="grid-img">
+        <div>
+          
+        </div>
+        <div>
+            <img src="recursos/imgs/RM_M1_Img15.svg" onclick="openModal1('dv-modal-1')">
+        </div>
+        <div>
+            <img src="recursos/imgs/RM_M1_Img16.svg" onclick="openModal2('dv-modal-2')">
+        </div>
+        <div>
+            <img src="recursos/imgs/RM_M1_Img17.svg" onclick="openModal3('dv-modal-3')">
+        </div>
+        <div>
+           
+        </div>
+        <div>
+           
+        </div>
+
+        <div>
+            <p><strong>Estágio 1</strong><br>Era da Fome das Pestilências</p>
+        </div>
+        <div>
+            <p><strong>Estágio 2</strong><br>Era do Declínio das Pandemias</p>
+        </div>
+        <div>
+            <p><strong>Estágio 3</strong><br>Era das Doenças Degenerativas e das Causadas pelo Homem</p>
+        </div>
+
+    </div>
+</div>
+
+
+<div id="dv-modal-1" class="modal-main">
+    <div style="width: 630px; margin: 103px auto;background-color:#EBF3FA;" class="modal-box">
+        <div class="modal-body">
+            <div class="modal-fechar-x">
+                <button class="btn-fechar-apre" onclick="closeModal1('dv-modal-1')">X</button>
+            </div>
+            <div class="modal-inside" style="margin-left: 20px;">
+                <div>
+                    <h1 style="color: #454D77; font-size: 20px;">Estágio 1 – Era da Fome das Pestilências</h1>
+                
+                    <p style="margin-top: 15px; ">
+                        Do início ao fim da Idade Média.
+                    </p>
+                    <p> Altos índices de natalidade.</p>
+                    <p>Altas taxas de mortalidade por doenças infecciosas e ocorrência de endemias e epidemias.</p>
+                    <p>Pandemias devastavam populações.</p>
+                    <p>Expectativa de vida em torno de 20 anos.</p>
+                    <p>Crescimento demográfico lento.</p>
+                    <p></p>
+                </div>
+                <div>
+                    <img src="recursos/imgs/RM_M1_Img15.svg" style="width: 100%;">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="dv-modal-2" class="modal-main" style="display: none; opacity: 1;">
+    <div style="width: 630px; margin: 97px auto;background-color:#EBF3FA;" class="modal-box modal-blue9">
+        <div class="modal-body">
+            <div class="modal-fechar-x">
+                <button class="btn-fechar-apre" onclick="closeModal2('dv-modal-2')">X</button>
+            </div>
+            <div class="modal-inside" style="margin-left: 20px;">
+                <div>
+                    <h1 style="color: #454D77; font-size: 20px;">Estágio 2 – Era do Declínio das Pandemias</h1>
+                    <p style="margin-top: 15px;">
+                        Do início da Renascença até o fim da Revolução Industrial.
+                    </p>
+                    <p>Progressiva diminuição das grandes pandemias.</p>
+                    <p>Doenças infecciosas como principal causa de mortes.</p>
+                    <p>Gradual melhora no padrão de vida. </p>
+                    <p>Expectativa de vida de 40 anos.</p>
+                    <p>Queda da mortalidade e alto índice de natalidade.</p>
+                    <p>Longo período de crescimento populacional.</p>
+                </div>
+                <div>
+                    <img src="recursos/imgs/RM_M1_Img16.svg" style="width: 100%;">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="dv-modal-3" class="modal-main" style="display: none; opacity: 1;">
+    <div style="width: 630px; background-color: #fff; margin: 92px auto;" class="modal-box">
+        <div class="modal-body">
+            <div class="modal-fechar-x">
+                <button class="btn-fechar-apre" onclick="closeModal3('dv-modal-3')">X</button>
+            </div>
+            <div class="modal-inside" style="margin-left: 20px;">
+                <div>
+                    <h1 style="color: #454D77; font-size: 20px;">Estágio 3 – Era das Doenças Degenerativas e das Causadas pelo Homem</h1>
+                    <p style="margin-top: 15px;">
+                        Revolução Industrial, até meados do século XX.                
+                    </p>
+                    <p>
+                        Progressiva melhora do padrão de vida das populações, advinda de saneamento básico, habitação, alimentação, educação.
+                    </p>
+                    <p> Declínio das doenças infecciosas.</p>
+                    <p>Expectativa de vida acima de 70 anos.</p>
+                    <p>Doenças cardiovasculares e neoplasias.</p>
+                    <p>Desaceleração no crescimento populacional.</p>
+                </div>
+                <div>
+                    <img src="recursos/imgs/RM_M1_Img17.svg" style="width: 100%;">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script>
+    function openModal1(mS) {
+        let modal = document.getElementById(mS);
+
+        if (typeof modal == 'undefined' || modal === null)
+            return;
+
+        modal.style.display = 'Block';
+        setTimeout(function() {
+            modal.style.opacity = 1;
+        }, 0.1);
+    }
+
+    function closeModal1(mS) {
+        let modal = document.getElementById(mS);
+
+        if (typeof modal == 'undefined' || modal === null)
+            return;
+
+        modal.style.display = 'none';
+        setTimeout(function() {
+            modal.style.opacity = 0;
+        }, 0.1);
+
+    }
+
+
+    function openModal2(mN) {
+        let modal = document.getElementById(mN);
+
+        if (typeof modal == 'undefined' || modal === null)
+            return;
+
+        modal.style.display = 'Block';
+        setTimeout(function() {
+            modal.style.opacity = 1;
+        }, 0.1);
+    }
+
+    function closeModal2(mn) {
+        let modal = document.getElementById(mn);
+
+        if (typeof modal == 'undefined' || modal === null)
+            return;
+
+        modal.style.display = 'none';
+        setTimeout(function() {
+            modal.style.display = 'none';
+        }, 1);
+    }
+
+    function openModal3(mN) {
+        let modal = document.getElementById(mN);
+
+        if (typeof modal == 'undefined' || modal === null)
+            return;
+
+        modal.style.display = 'Block';
+        setTimeout(function() {
+            modal.style.opacity = 1;
+        }, 0.1);
+    }
+
+    function closeModal3(mn) {
+        let modal = document.getElementById(mn);
+
+        if (typeof modal == 'undefined' || modal === null)
+            return;
+
+        modal.style.display = 'none';
+        setTimeout(function() {
+            modal.style.display = 'none';
+        }, 1);
+    }
+
+    function openModal4(mN) {
+        let modal = document.getElementById(mN);
+
+        if (typeof modal == 'undefined' || modal === null)
+            return;
+
+        modal.style.display = 'Block';
+        setTimeout(function() {
+            modal.style.opacity = 1;
+        }, 0.1);
+    }
+
+    function closeModal4(mn) {
+        let modal = document.getElementById(mn);
+
+        if (typeof modal == 'undefined' || modal === null)
+            return;
+
+        modal.style.display = 'none';
+        setTimeout(function() {
+            modal.style.display = 'none';
+        }, 1);
+    }
+
+    function openModal5(mN) {
+        let modal = document.getElementById(mN);
+
+        if (typeof modal == 'undefined' || modal === null)
+            return;
+
+        modal.style.display = 'Block';
+        setTimeout(function() {
+            modal.style.opacity = 1;
+        }, 0.1);
+    }
+
+    function closeModal5(mn) {
+        let modal = document.getElementById(mn);
+
+        if (typeof modal == 'undefined' || modal === null)
+            return;
+
+        modal.style.display = 'none';
+        setTimeout(function() {
+            modal.style.display = 'none';
+        }, 1);
+    }
+
+    function openModal6(mN) {
+        let modal = document.getElementById(mN);
+
+        if (typeof modal == 'undefined' || modal === null)
+            return;
+
+        modal.style.display = 'Block';
+        setTimeout(function() {
+            modal.style.opacity = 1;
+        }, 0.1);
+    }
+
+    function closeModal6(mn) {
+        let modal = document.getElementById(mn);
+
+        if (typeof modal == 'undefined' || modal === null)
+            return;
+
+        modal.style.display = 'none';
+        setTimeout(function() {
+            modal.style.display = 'none';
+        }, 1);
+    }
+
+    function openModal7(mN) {
+        let modal = document.getElementById(mN);
+
+        if (typeof modal == 'undefined' || modal === null)
+            return;
+
+        modal.style.display = 'Block';
+        setTimeout(function() {
+            modal.style.opacity = 1;
+        }, 0.1);
+    }
+
+    function closeModal7(mn) {
+        let modal = document.getElementById(mn);
+
+        if (typeof modal == 'undefined' || modal === null)
+            return;
+
+        modal.style.display = 'none';
+        setTimeout(function() {
+            modal.style.display = 'none';
+        }, 1);
+    }
+
+    function openModal8(mN) {
+        let modal = document.getElementById(mN);
+
+        if (typeof modal == 'undefined' || modal === null)
+            return;
+
+        modal.style.display = 'Block';
+        setTimeout(function() {
+            modal.style.opacity = 1;
+        }, 0.1);
+    }
+
+    function closeModal8(mn) {
+        let modal = document.getElementById(mn);
+
+        if (typeof modal == 'undefined' || modal === null)
+            return;
+
+        modal.style.display = 'none';
+        setTimeout(function() {
+            modal.style.display = 'none';
+        }, 1);
+    }
+
+    function openModal9(mN) {
+        let modal = document.getElementById(mN);
+
+        if (typeof modal == 'undefined' || modal === null)
+            return;
+
+        modal.style.display = 'Block';
+        setTimeout(function() {
+            modal.style.opacity = 1;
+        }, 0.1);
+    }
+
+    function closeModal9(mn) {
+        let modal = document.getElementById(mn);
+
+        if (typeof modal == 'undefined' || modal === null)
+            return;
+
+        modal.style.display = 'none';
+        setTimeout(function() {
+            modal.style.display = 'none';
+        }, 1);
+    }
+
+    function openModal10(mN) {
+        let modal = document.getElementById(mN);
+
+        if (typeof modal == 'undefined' || modal === null)
+            return;
+
+        modal.style.display = 'Block';
+        setTimeout(function() {
+            modal.style.opacity = 1;
+        }, 0.1);
+    }
+
+    function closeModal10(mn) {
+        let modal = document.getElementById(mn);
+
+        if (typeof modal == 'undefined' || modal === null)
+            return;
+
+        modal.style.display = 'none';
+        setTimeout(function() {
+            modal.style.display = 'none';
+        }, 1);
+    }
+
+</script>

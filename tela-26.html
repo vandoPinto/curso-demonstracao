@@ -1,126 +1,16 @@
-<style>
-    .col-4 {
-        display: flex;
-        width: 94%;
-        margin-left: 25px;
-    }
-
-    .col-4>div {
-        margin: 0 10px;
-    }
-
-    /* Cards */
-
-    .scene {
-        display: inline-block;
-    }
-
-    .card {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        cursor: pointer !important;
-        transform-style: preserve-3d;
-        transform-origin: center right;
-        transition: transform 1s;
-    }
-
-    .card.flip {
-        transform: translateX(-100%) rotateY(-180deg);
-    }
-
-    .card-face {
-        position: absolute;
-        text-align: center;
-        backface-visibility: hidden;
-    }
-
-
-
-    .card-face-back {
-        display: flex;
-        align-items: center;
-        width: 170px;
-        height: 250px;
-        padding: 10px;
-        color: #fff;
-        background-color: #167a56;
-        transform: rotateY(180deg);
-    }
-
-    h1 {
-        font-size: 18px;
-        font-weight: 900;
-        text-transform: uppercase;
-        color: #344ca4;
-    }
-
-    p {
-        font-size: 14px;
-    }
-</style>
-
-<div class="largura-1_1">
-    <img style="width:100%; right: 0px;" src="recursos/imgs/RI_05.svg">
-</div>
-
-
-
-<div class="coluna-esquerda largura-1_1 ">
-    <div style="margin: 25px 35px; margin-bottom: 15px;">
-        <h1>As atribuições dos profissionais que compõem a equipe da APS</h1>
-        <p>Acompanhe as atribuições comuns a todos os membros das equipes que atuam na Atenção Básica de acordo com
-            a PNAB (2017). <strong>Clique nas imagens</strong>:</p>
+<div style="padding: 40px;">
+    <div style="display: flex;justify-content: space-between;align-items: center;">
+        <h1 style="font-size: 24px;">Web Sites</h1>
+    </div>
+    <div style="display: flex;align-items: center;flex-direction:row;justify-content: flex-end;">
+        <div class="animate__animated animate__backInLeft" style="width: 45%; padding: 5px;">
+            <img src="recursos/imgs/websites/site3.png" style="width: 90%">
+            <p style="font-size: 14px;">Ambiente Virtual de Aprendizagem</p>
+        </div>
+        <div class="animate__animated animate__backInLeft" style="width: 45%;padding: 5px;">
+            <img src="recursos/imgs/websites/site4.png" style="width: 90%">
+            <p style="font-size: 14px;">Ambiente Virtual de Aprendizagem - Política de Saúde na Assistência Farmacêutica</p>
+        </div>
+        
     </div>
 </div>
-
-<div class="coluna esquerda largura-1_1 scene scene--card">
-    <div class="col-4">
-        <div class="card">
-            <div class="card-face"><img src="recursos/imgs/RI_02.svg"></div>
-            <div class="card-face card-face-back">Realizar o cuidado integral à saúde da população adscrita,
-                prioritariamente no âmbito da Unidade Básica de Saúde, e quando necessário, no domicílio e demais
-                espaços comunitários (escolas, associações, entre outros), com atenção especial às populações que
-                apresentem necessidades específicas (em situação de rua, em medida socioeducativa, privada de
-                liberdade, ribeirinha, fluvial, etc.).</div>
-        </div>
-        <div class="card">
-            <div class="card-face"><img src="recursos/imgs/RI_03.svg"></div>
-            <div class="card-face card-face-back">Participar do processo de territorialização e mapeamento da área
-                de atuação da equipe, identificando grupos, famílias e indivíduos expostos a riscos e
-                vulnerabilidades;</div>
-        </div>
-        <div class="card">
-            <div class="card-face"><img src="recursos/imgs/RI_10.svg"></div>
-            <div class="card-face card-face-back">Cadastrar e manter atualizado o cadastramento e outros dados de
-                saúde das famílias e dos indivíduos no sistema de informação da Atenção Básica vigente, utilizando
-                as informações sistematicamente para a análise da situação de saúde, considerando as características
-                sociais, econômicas, culturais, demográficas e epidemiológicas do território, priorizando as
-                situações a serem acompanhadas no planejamento local;</div>
-        </div>
-        <div class="card">
-            <div class="card-face"> <img src="recursos/imgs/RI_09.svg"></div>
-            <div class="card-face card-face-back">Realizar ações de atenção à saúde conforme a necessidade de saúde
-                da população local, bem como aquelas previstas nas prioridades, protocolos, diretrizes clínicas e
-                terapêuticas, assim como, na oferta nacional de ações e serviços essenciais e ampliados da AB; [...]
-                (BRASIL, 2017)</div>
-        </div>
-    </div>
-</div>
-
-
-<footer style="padding: 0;">
-    <div class="largura-1_1">
-        <img style="width:100%;  right: 0px;" src="recursos/imgs/RI_26.svg">
-    </div>
-</footer>
-
-<script>
-    var cards = document.querySelectorAll('.card');
-
-    [...cards].forEach(card => {
-        card.addEventListener('click', function () {
-            card.classList.toggle('flip');
-        });
-    });
-</script>

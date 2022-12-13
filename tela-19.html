@@ -1,32 +1,68 @@
 <style>
     iframe {
-        width: 280px;
-        height: 160px;
+        height: 225px;
+    }
+    .iframes{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 5px;
+    }
+
+</style>
+<div style="padding: 40px;">
+    <div style="display: flex;align-items: center;justify-content: space-between;">
+        <h1 style="font-size: 24px;width: 550px;">Vinhetas</h1>
+        <img src="recursos/imgs/bolinhas.svg" style="width: 70px;">
+    </div>
+    <div
+        style="display: flex;width: 100%;align-items: center;justify-content: space-around;">
+        <div class="iframes">
+            <video src="recursos/video/vinheta-estrategia-saude.mov" controls="true" style="width: 100%;height: 225px;"></video>
+            <p style="width: 180px;text-align: center;justify-content: center;">Vinheta pra o Curso Estratégia Saúde
+                da Família</p>
+        </div>
+        <div class="iframes">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/nABDC5030eo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p style="width: 210px; text-align: center;">Vinheta pra o Curso Políticas Informadas por Evidências em
+                AF</p>
+        </div>
+    </div>
+</div>
+
+<!-- 
+
+<style>
+    iframe {
+        width: 240px;
+        height: 130px;
+    }
+
+    .centralizar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 </style>
 <div style="padding: 40px;">
     <div style="display: flex;align-items: center;justify-content: space-between;">
-        <h1 style="font-size: 24px;width: 550px;">Animações</h1>
-        <div style="width: 290px;height: 20px;background-color: #ffc000;margin-right: -70px;"></div>
+        <h1 style="font-size: 24px;width: 550px;">Vinhetas</h1>
+        <img src="recursos/imgs/bolinhas.svg" style="width: 70px;">
     </div>
     <div
-        style="display: flex;margin-top: 90px;margin-left: 90px;width: 620px;align-items: center;justify-content: space-between;align-content: flex-start;">
-        <div style="margin-top: -10px;">
-            <iframe src="https://www.youtube.com/embed/7E6L-ehP8Pc" title="Animação para o LEMTES - Fiocruz Brasília"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen=""></iframe>
-            <p style="width: 220px;">Animação para o LEMTES - Fiocruz Brasília</p>
+        style="display: flex;margin-top: 90px;margin-left: 90px;width: 570px;align-items: center;justify-content: space-between;">
+        <div class="centralizar">
+           
         </div>
-        <div>
-            <iframe src="https://www.youtube.com/embed/xz2Sl5cl_IU"
-                title="Trailer para o Curso Cuidado Integral à Saúde de Crianças com Transtornos de Neurodesenvolvimento"
-                frameborder="0"
+        <div class="centralizar">
+            <iframe src="https://www.youtube.com/embed/nABDC5030eo"
+                title="Vinheta pra o Curso Políticas Informadas por Evidências em AF" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen=""></iframe>
-            <p style="width: 239px;">Trailer para o Curso Cuidado Integral à Saúde de Crianças com Transtornos de
-                Neurodesenvolvimento</p>
+            <p style="width: 210px; text-align: center;">Vinheta pra o Curso Políticas Informadas por Evidências em
+                AF</p>
         </div>
     </div>
-    <img src="recursos/imgs/Slide29.jpg" style="width: 240px;top: 390px;position: absolute;right: -94px;">
-</div>
+</div> -->
